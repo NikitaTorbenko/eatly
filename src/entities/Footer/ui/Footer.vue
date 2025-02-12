@@ -1,19 +1,34 @@
 <script setup lang="ts">
-import Footer_logo from "../assets/icons/footer-logo.svg";
+import { Logo } from "@/shared/ui/Logo";
 import Instagram from "../assets/icons/instagram.svg";
 import In from "../assets/icons/in.svg";
 import Facebook from "../assets/icons/facebook.svg";
 import Twitter from "../assets/icons/twitter.svg";
+
+const links = [
+  {
+    title: "Blog",
+    link: "/",
+  },
+  {
+    title: "Pricing",
+    link: "/",
+  },
+  {
+    title: "About Us",
+    link: "/",
+  },
+  {
+    title: "Contact",
+    link: "/",
+  },
+];
 </script>
+
 <template>
   <footer class="footer">
     <div class="footer-nav">
-      <div class="footer-logo">
-        <div class="footer-logo-img">
-          <img :src="Footer_logo" alt="" />
-        </div>
-        <p class="footer-logo-title">eatly</p>
-      </div>
+      <Logo />
       <div class="footer-links">
         <img :src="Instagram" alt="" />
         <img :src="In" alt="" />
@@ -23,10 +38,16 @@ import Twitter from "../assets/icons/twitter.svg";
     </div>
     <div class="footer-content">
       <div class="footer-content-text">
-        <p class="footer-content-text-item">Blog</p>
-        <p class="footer-content-text-item">Pricing</p>
-        <p class="footer-content-text-item">About Us</p>
-        <p class="footer-content-text-item">Contact</p>
+        <p
+          v-for="(item, index) in links"
+          :key="index"
+          class="footer-content-text-item"
+        >
+          {{}}
+        </p>
+        <p class="footer-content-text-item"></p>
+        <p class="footer-content-text-item"></p>
+        <p class="footer-content-text-item"></p>
       </div>
     </div>
     <div class="footer-end">
@@ -42,33 +63,30 @@ import Twitter from "../assets/icons/twitter.svg";
 }
 .footer {
   background-color: #efefef;
+
   &-nav {
     padding: 55px 30px 55px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  &-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  &-logo-title {
-    color: #6c5fbc;
-  }
+
   &-links {
     display: flex;
     align-items: center;
     gap: 20px;
   }
+
   &-content {
     padding: 0px 32px;
   }
+
   &-content-text {
     display: flex;
     flex-direction: column;
     gap: 30px;
   }
+
   &-content-text-item {
     font-size: 14px;
     font-weight: 500;
@@ -76,10 +94,12 @@ import Twitter from "../assets/icons/twitter.svg";
     text-transform: uppercase;
     color: #606060;
   }
+
   &-end {
     margin: 0px 30px;
     padding: 33px 0px 0px 0px;
   }
+
   &-end-text {
     border-top: 1px solid #cbcbcb;
     padding: 26px 44px 36px 44px;
