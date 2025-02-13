@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import { Logo } from "@/shared/ui/Logo";
-import Instagram from "../assets/icons/instagram.svg";
-import In from "../assets/icons/in.svg";
-import Facebook from "../assets/icons/facebook.svg";
-import Twitter from "../assets/icons/twitter.svg";
 import { links } from "../consts";
+import { imgs } from "../consts";
 </script>
 
 <template>
@@ -12,10 +9,12 @@ import { links } from "../consts";
     <div class="footer-nav">
       <Logo />
       <div class="footer-links">
-        <img :src="Instagram" alt="" />
-        <img :src="In" alt="" />
-        <img :src="Facebook" alt="" />
-        <img :src="Twitter" alt="" />
+        <img
+          v-for="(item, index) in imgs"
+          :key="index"
+          :src="item.icon"
+          alt=""
+        />
       </div>
     </div>
     <div class="footer-content">
