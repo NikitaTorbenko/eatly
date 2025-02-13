@@ -1,34 +1,18 @@
 <script setup lang="ts">
 import { Logo } from "@/shared/ui/Logo";
-import { links } from "../consts";
-import { imgs } from "../consts";
+import FooterMedia from "./FooterMedia.vue";
+import FooterLinks from "./FooterLinks.vue";
 </script>
 
 <template>
   <footer class="footer">
     <div class="footer-nav">
       <Logo />
-      <div class="footer-links">
-        <img
-          v-for="(item, index) in imgs"
-          :key="index"
-          :src="item.icon"
-          alt=""
-        />
-      </div>
+      <FooterMedia />
     </div>
-    <div class="footer-content">
-      <div class="footer-content-text">
-        <RouterLink
-          v-for="(item, index) in links"
-          :key="index"
-          :to="item.link"
-          class="footer-content-text-item"
-        >
-          {{ item.title }}
-        </RouterLink>
-      </div>
-    </div>
+
+    <FooterLinks />
+
     <div class="footer-end">
       <p class="footer-end-text">© 2023 EATLY All Rights Reserved.</p>
     </div>
@@ -44,30 +28,6 @@ import { imgs } from "../consts";
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  &-links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  &-content {
-    padding: 0px 32px;
-  }
-
-  &-content-text {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  &-content-text-item {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 19px;
-    text-transform: uppercase;
-    color: #606060;
   }
 
   &-end {
