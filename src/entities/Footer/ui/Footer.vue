@@ -37,10 +37,6 @@ import { links } from "../consts";
 </template>
 
 <style lang="scss" scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
 .footer {
   background-color: #efefef;
 
