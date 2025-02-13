@@ -4,25 +4,7 @@ import Instagram from "../assets/icons/instagram.svg";
 import In from "../assets/icons/in.svg";
 import Facebook from "../assets/icons/facebook.svg";
 import Twitter from "../assets/icons/twitter.svg";
-
-const links = [
-  {
-    title: "Blog",
-    link: "/",
-  },
-  {
-    title: "Pricing",
-    link: "/",
-  },
-  {
-    title: "About Us",
-    link: "/",
-  },
-  {
-    title: "Contact",
-    link: "/",
-  },
-];
+import { links } from "../consts";
 </script>
 
 <template>
@@ -38,16 +20,14 @@ const links = [
     </div>
     <div class="footer-content">
       <div class="footer-content-text">
-        <p
+        <RouterLink
           v-for="(item, index) in links"
           :key="index"
+          :to="item.link"
           class="footer-content-text-item"
         >
-          {{}}
-        </p>
-        <p class="footer-content-text-item"></p>
-        <p class="footer-content-text-item"></p>
-        <p class="footer-content-text-item"></p>
+          {{ item.title }}
+        </RouterLink>
       </div>
     </div>
     <div class="footer-end">
