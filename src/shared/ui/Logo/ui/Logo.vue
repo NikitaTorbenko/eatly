@@ -16,6 +16,8 @@ import Logo from "../assets/img/Logo.png";
   gap: 10px;
 
   &-title {
+    font-weight: 600;
+    font-size: 21px;
     color: var(--p-purple-800);
   }
 }
