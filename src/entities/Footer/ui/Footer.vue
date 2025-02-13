@@ -37,7 +37,7 @@ import FooterLinks from "./FooterLinks.vue";
 
   &-end-text {
     border-top: 1px solid #cbcbcb;
-    padding: 26px 44px 36px 44px;
+    padding: 26px 44px 36px;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;

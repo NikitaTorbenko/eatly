@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { links } from "../consts";
+import { links } from "@/shared/consts";
 </script>
 
 <template>

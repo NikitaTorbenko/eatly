@@ -1,6 +1,12 @@
 <script setup lang="ts">
-import BurgerIcon from "../assets/icons/BurgerIcon.vue";
+import Sidebar from "./Sidebar.vue";
+import { storeToRefs } from "pinia";
 import { Logo } from "@/shared/ui/Logo";
+import { useSidebarStore } from "../store";
+import BurgerIcon from "../assets/icons/BurgerIcon.vue";
+
+const store = useSidebarStore();
+const { visible } = storeToRefs(store);
 </script>
 
 <template>
@@ -9,7 +15,8 @@ import { Logo } from "@/shared/ui/Logo";
       <Logo />
 
       <div class="burger">
-        <BurgerIcon />
+        <Sidebar />
+        <BurgerIcon @click="visible = true" />
       </div>
     </div>
   </header>

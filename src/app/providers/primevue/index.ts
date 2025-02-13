@@ -1,0 +1,1 @@
+export { primevueOptions } from "./primevueOptions";

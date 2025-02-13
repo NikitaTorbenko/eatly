@@ -1,2 +1,2 @@
 export { default as App } from "./App.vue";
-export { router } from "./providers";
+export { router, pinia, primevueOptions } from "./providers";
