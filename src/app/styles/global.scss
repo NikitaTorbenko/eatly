@@ -1,0 +1,24 @@
+@use "reset";
+@use "font-init";
+@use "variables" as v;
+
+body {
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 100%;
+  max-width: v.$tablet;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  @media (min-width: v.$tablet) {
+    max-width: v.$desctop;
+    padding: 0 70px;
+  }
+
+  @media (min-width: v.$desctop) {
+    max-width: v.$desctopLg;
+    padding: 0 95px;
+  }
+}
