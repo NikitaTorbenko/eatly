@@ -4,14 +4,14 @@ import { links } from "@/shared/consts";
 
 <template>
   <div class="footer-content-text">
-    <RouterLink
+    <router-link
       v-for="(item, index) in links"
       :key="index"
       :to="item.link"
       class="footer-content-text-item"
     >
       {{ item.title }}
-    </RouterLink>
+    </router-link>
   </div>
 </template>
 

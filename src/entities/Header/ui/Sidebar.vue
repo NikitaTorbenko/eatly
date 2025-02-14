@@ -14,14 +14,14 @@ const { visible } = storeToRefs(store);
     <div class="sidebar">
       <div class="sidebar-top">
         <div class="sidebar-item" v-for="item in links">
-          <RouterLink :to="item.link" class="sidebar-link">
+          <router-link :to="item.link" class="sidebar-link">
             {{ item.title }}
-          </RouterLink>
+          </router-link>
         </div>
       </div>
 
       <div class="sidebar-bottom">
-        <Button label="Sign in" class="btn" variant="link" />
+        <Button label="Login" class="btn" variant="link" />
         <Button label="Sign up" class="btn" />
       </div>
     </div>

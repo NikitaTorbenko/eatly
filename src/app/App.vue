@@ -10,5 +10,5 @@ import { Footer } from "@/entities/Footer";
 </template>
 
 <style lang="scss">
-@import "./styles/global.scss";
+@import url("./styles/global.scss");
 </style>
