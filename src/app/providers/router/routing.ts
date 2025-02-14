@@ -7,4 +7,9 @@ export const routes = [
     component: () => import("@/pages/AboutPage/ui/AboutPage.vue"),
     name: "AboutPage",
   },
+  {
+    path: "/contact",
+    component: () => import("@/pages/ContactPage/ui/ContactPage.vue"),
+    name: "ContactPage",
+  },
 ];
