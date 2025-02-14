@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ContactForm from "./ContactForm.vue";
+import { ContactForm } from "@/features/ContactForm";
 import Preview from "./Preview.vue";
 </script>
 
