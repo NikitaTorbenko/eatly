@@ -6,22 +6,31 @@ import FooterLinks from "./FooterLinks.vue";
 
 <template>
   <footer class="footer">
-    <div class="footer-nav">
-      <Logo />
-      <FooterMedia />
-    </div>
+    <div class="container">
+      <div class="footer-nav">
+        <Logo />
+        <FooterMedia />
+      </div>
 
-    <FooterLinks />
+      <FooterLinks />
 
-    <div class="footer-end">
-      <p class="footer-end-text">© 2023 EATLY All Rights Reserved.</p>
+      <div class="footer-end">
+        <p class="footer-end-text">© 2023 EATLY All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 </template>
 
 <style lang="scss" scoped>
+@use "@/app/styles/variables" as v;
+
 .footer {
   background-color: #efefef;
+  display: none;
+
+  @media (max-width: v.$tablet) {
+    display: block;
+  }
 
   &-nav {
     padding: 55px 30px 55px 30px;
