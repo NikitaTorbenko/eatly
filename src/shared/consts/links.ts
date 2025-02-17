@@ -1,5 +1,9 @@
 export const links = [
   {
+    title: "Menu",
+    link: "/",
+  },
+  {
     title: "Blog",
     link: "/",
   },
@@ -8,11 +12,7 @@ export const links = [
     link: "/",
   },
   {
-    title: "About Us",
-    link: "/",
-  },
-  {
     title: "Contact",
-    link: "/",
+    link: "/contact",
   },
 ];
