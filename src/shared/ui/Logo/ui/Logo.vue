@@ -4,16 +4,22 @@ import Logo from "../assets/img/Logo.png";
 
 <template>
   <div class="logo">
-    <img class="logo-icon" :src="Logo" alt="" />
-    <h1 class="logo-title text-purple-800">eatly</h1>
+    <router-link to="/">
+      <div class="logo-inner">
+        <img class="logo-icon" :src="Logo" alt="" />
+        <h1 class="logo-title text-purple-800">eatly</h1>
+      </div>
+    </router-link>
   </div>
 </template>
 
 <style scoped lang="scss">
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  &-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
   &-title {
     font-weight: 600;
