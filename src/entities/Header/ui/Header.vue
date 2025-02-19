@@ -22,8 +22,13 @@ const { visible } = storeToRefs(store);
         <div class="link-list"></div>
 
         <div class="sign">
-          <Button label="Login" class="btn" variant="link" />
-          <Button label="Sign up" class="btn" />
+          <router-link @click="store.closeSidebar" to="/login">
+            <Button label="Login" class="btn" variant="link" />
+          </router-link>
+
+          <router-link @click="store.closeSidebar" to="/auth">
+            <Button label="Sign up" class="btn" />
+          </router-link>
         </div>
 
         <div class="burger">
