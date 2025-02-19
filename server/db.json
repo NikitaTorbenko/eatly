@@ -13,5 +13,126 @@
       "role": "user"
     }
   ],
-  "blogs": []
+  "blogs": [
+    {
+      "id": 1,
+      "title": "How To Order Food?",
+      "author": "Perperzon",
+      "date": "15 DEC, 2022",
+      "image": "https://example.com/images/blog1.jpg",
+      "content": [
+        {
+          "section": "Browse Restaurants And Menus",
+          "text": "Once you're logged in, you can browse through the list of available restaurants on the Eatly website. You can filter by cuisine, price, and distance to find the perfect restaurant for your needs. Click on a restaurant to view its menu."
+        },
+        {
+          "section": "Select Your Items",
+          "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+        },
+        {
+          "section": "Place Your Order",
+          "text": "Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC."
+        }
+      ],
+      "related_articles": [4, 5, 6]
+    },
+    {
+      "id": 2,
+      "title": "How To Track The Order?",
+      "author": "Perperzon",
+      "date": "15 DEC, 2022",
+      "image": "https://example.com/images/blog2.jpg",
+      "content": [
+        {
+          "section": "Understanding Order Status",
+          "text": "Each order goes through multiple stages: processing, out for delivery, and delivered. Understanding these statuses will help you track your order effectively."
+        },
+        {
+          "section": "Using Tracking Links",
+          "text": "Once your order is dispatched, you will receive a tracking link via SMS or email. This link provides real-time updates on your order’s location."
+        },
+        {
+          "section": "Troubleshooting",
+          "text": "If you face any issues tracking your order, contact customer support for immediate assistance."
+        }
+      ],
+      "related_articles": [1, 3, 6]
+    },
+    {
+      "id": 3,
+      "title": "How To Manage Cards?",
+      "author": "Perperzon",
+      "date": "15 DEC, 2022",
+      "image": "https://example.com/images/blog3.jpg",
+      "content": [
+        {
+          "section": "Adding a Card",
+          "text": "Go to the payment settings and select 'Add New Card'. Enter your card details securely."
+        },
+        {
+          "section": "Setting a Default Card",
+          "text": "Choose a preferred payment method by setting a default card for transactions."
+        },
+        {
+          "section": "Security Tips",
+          "text": "Ensure that your card information is kept safe by using two-factor authentication and monitoring transactions regularly."
+        }
+      ],
+      "related_articles": [2, 5, 6]
+    },
+    {
+      "id": 4,
+      "title": "Tips & Tricks For Business",
+      "author": "Perperzon",
+      "date": "15 DEC, 2022",
+      "image": "https://example.com/images/blog4.jpg",
+      "content": [
+        {
+          "section": "Understanding Market Trends",
+          "text": "Keeping up with trends in your industry is essential for staying competitive."
+        },
+        {
+          "section": "Improving Customer Experience",
+          "text": "A strong focus on customer satisfaction can greatly improve business success."
+        }
+      ],
+      "related_articles": [1, 3, 5]
+    },
+    {
+      "id": 5,
+      "title": "How To Control Money?",
+      "author": "Perperzon",
+      "date": "15 DEC, 2022",
+      "image": "https://example.com/images/blog5.jpg",
+      "content": [
+        {
+          "section": "Creating a Budget",
+          "text": "Set clear financial goals and track expenses to stay within your budget."
+        },
+        {
+          "section": "Saving Strategies",
+          "text": "Develop a habit of saving by setting aside a portion of your income each month."
+        }
+      ],
+      "related_articles": [2, 4, 6]
+    },
+    {
+      "id": 6,
+      "title": "Top 5 Business Ideas",
+      "author": "Perperzon",
+      "date": "15 DEC, 2022",
+      "image": "https://example.com/images/blog6.jpg",
+      "content": [
+        {
+          "section": "E-commerce",
+          "text": "Starting an online store is a great way to tap into the growing digital market."
+        },
+        {
+          "section": "Freelancing",
+          "text": "Leverage your skills to offer services as a freelancer."
+        }
+      ],
+      "related_articles": [1, 3, 5]
+    }
+  ]
 }
