@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { imgs } from "../consts";
+import { imgs } from "../../consts";
 </script>
 
 <template>

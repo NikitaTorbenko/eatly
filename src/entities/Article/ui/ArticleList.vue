@@ -35,7 +35,10 @@ import Article from "./Article.vue";
   }
 
   @media (min-width: v.$desctop) {
-    column-gap: 47px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 77px;
     row-gap: 70px;
   }
 }
