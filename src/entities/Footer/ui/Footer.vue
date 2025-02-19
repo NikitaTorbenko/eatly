@@ -2,6 +2,7 @@
 import { Logo } from "@/shared/ui/Logo";
 import FooterMedia from "./FooterMedia.vue";
 import FooterLinks from "./FooterLinks.vue";
+import FooterTablet from "./FooterTablet/FooterTablet.vue";
 </script>
 
 <template>
@@ -19,6 +20,7 @@ import FooterLinks from "./FooterLinks.vue";
       </div>
     </div>
   </footer>
+  <FooterTablet />
 </template>
 
 <style lang="scss" scoped>
@@ -26,14 +28,14 @@ import FooterLinks from "./FooterLinks.vue";
 
 .footer {
   background-color: #efefef;
-  display: none;
+  display: block;
 
-  @media (max-width: v.$tablet) {
-    display: block;
+  @media (min-width: v.$tablet) {
+    display: none;
   }
 
   &-nav {
-    padding: 55px 30px 55px 30px;
+    padding: 55px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,7 +43,7 @@ import FooterLinks from "./FooterLinks.vue";
 
   &-end {
     margin: 0px 30px;
-    padding: 33px 0px 0px 0px;
+    padding-top: 33px;
   }
 
   &-end-text {
