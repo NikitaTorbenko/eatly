@@ -12,6 +12,11 @@ export const routes = [
     name: "AboutPage",
   },
   {
+    path: "/blogs",
+    component: () => import("@/pages/Blogs/ui/Blogs.vue"),
+    name: "Blogs",
+  },
+  {
     path: "/contact",
     component: () => import("@/pages/ContactPage/ui/ContactPage.vue"),
     name: "ContactPage",

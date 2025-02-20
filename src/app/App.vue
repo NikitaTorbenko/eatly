@@ -9,8 +9,8 @@ import Banner from "@/entities/Banner/ui/Banner.vue";
   <Header />
   <RouterView />
   <Footer />
-  <ArticleList />
-  <Banner />
+  <!-- <ArticleList />
+  <Banner /> -->
 </template>
 
 <style lang="scss">

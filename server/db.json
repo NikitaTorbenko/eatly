@@ -134,5 +134,32 @@
       ],
       "related_articles": [1, 3, 5]
     }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "How long does delivery take?",
+      "answer": "Delivery times vary depending on your location and the restaurant's processing time. Typically, it takes between 30 to 60 minutes."
+    },
+    {
+      "id": 2,
+      "question": "How Does It Work?",
+      "answer": "Simply place an order through our website or mobile app, choose your preferred restaurant, select your items, and proceed to checkout. We handle the rest!"
+    },
+    {
+      "id": 3,
+      "question": "How does your food delivery service work?",
+      "answer": "Our platform connects you with local restaurants. Once you place an order, the restaurant prepares your food, and a delivery partner brings it to your doorstep."
+    },
+    {
+      "id": 4,
+      "question": "What payment options do you accept?",
+      "answer": "We accept various payment methods, including credit/debit cards, PayPal, and digital wallets like Apple Pay and Google Pay."
+    },
+    {
+      "id": 5,
+      "question": "Do you offer discounts or promotions?",
+      "answer": "Yes! We frequently offer promotions and discounts. Keep an eye on our website or subscribe to our newsletter to stay updated."
+    }
   ]
 }

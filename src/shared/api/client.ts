@@ -1,5 +1,5 @@
-import { AxiosInstance, type AxiosRequestConfig } from "axios";
-import { IClient } from "./model/types";
+import { type AxiosInstance, type AxiosRequestConfig } from "axios";
+import { type IClient } from "./model/types";
 import { BASE_API } from "./model";
 
 export const ApiClient = async (
