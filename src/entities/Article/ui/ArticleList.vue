@@ -35,11 +35,14 @@ import Article from "./Article.vue";
   }
 
   @media (min-width: v.$desctop) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     column-gap: 77px;
     row-gap: 70px;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;*/
   }
 }
 </style>

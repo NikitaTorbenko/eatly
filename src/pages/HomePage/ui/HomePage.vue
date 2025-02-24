@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import Button from "primevue/button";
+import StatisticBanner from "./StatisticBanner/StatisticBanner.vue";
 </script>
 
 <template>
   <div class="">
-    <h2>Home Page</h2>
-    <Button label="Test" />
+    <StatisticBanner />
   </div>
 </template>
 
