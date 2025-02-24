@@ -161,5 +161,128 @@
       "question": "Do you offer discounts or promotions?",
       "answer": "Yes! We frequently offer promotions and discounts. Keep an eye on our website or subscribe to our newsletter to stay updated."
     }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "The Chicken King",
+      "category": "Healthy",
+      "rating": 4.8,
+      "delivery_time": "24min",
+      "image": "https://example.com/images/chicken-king.jpg",
+      "dishes": [101, 102]
+    },
+    {
+      "id": 2,
+      "name": "The Burger King",
+      "category": "Trending",
+      "rating": 4.9,
+      "delivery_time": "24min",
+      "image": "https://example.com/images/burger-king.jpg",
+      "dishes": [201, 202]
+    },
+    {
+      "id": 3,
+      "name": "Supreme Seafood",
+      "category": "Supreme",
+      "rating": 4.7,
+      "delivery_time": "30min",
+      "image": "https://example.com/images/supreme-seafood.jpg",
+      "dishes": [301, 302]
+    }
+  ],
+  "dishes": [
+    {
+      "id": 101,
+      "restaurant_id": 1,
+      "name": "Chicken Hell",
+      "category": "Healthy",
+      "price": 12.99,
+      "rating": 4.8,
+      "delivery_time": "24min",
+      "image": "https://example.com/images/chicken-hell.jpg"
+    },
+    {
+      "id": 102,
+      "restaurant_id": 1,
+      "name": "Swe Dish",
+      "category": "Trending",
+      "price": 19.99,
+      "rating": 4.9,
+      "delivery_time": "34min",
+      "image": "https://example.com/images/swe-dish.jpg"
+    },
+    {
+      "id": 201,
+      "restaurant_id": 2,
+      "name": "Classic Burger",
+      "category": "Trending",
+      "price": 9.99,
+      "rating": 4.9,
+      "delivery_time": "24min",
+      "image": "https://example.com/images/classic-burger.jpg"
+    },
+    {
+      "id": 202,
+      "restaurant_id": 2,
+      "name": "Double Cheese Burger",
+      "category": "Trending",
+      "price": 11.99,
+      "rating": 5.0,
+      "delivery_time": "24min",
+      "image": "https://example.com/images/double-cheese-burger.jpg"
+    },
+    {
+      "id": 301,
+      "restaurant_id": 3,
+      "name": "Grilled Salmon",
+      "category": "Supreme",
+      "price": 19.99,
+      "rating": 4.8,
+      "delivery_time": "30min",
+      "image": "https://example.com/images/grilled-salmon.jpg"
+    },
+    {
+      "id": 302,
+      "restaurant_id": 3,
+      "name": "Lobster Special",
+      "category": "Supreme",
+      "price": 29.99,
+      "rating": 5.0,
+      "delivery_time": "30min",
+      "image": "https://example.com/images/lobster-special.jpg"
+    }
+  ],
+  "popular_dishes": [
+    {
+      "id": 101,
+      "restaurant_id": 1,
+      "name": "Chicken Hell",
+      "category": "Healthy",
+      "price": 12.99,
+      "rating": 4.8,
+      "delivery_time": "24min",
+      "image": "https://example.com/images/chicken-hell.jpg"
+    },
+    {
+      "id": 202,
+      "restaurant_id": 2,
+      "name": "Double Cheese Burger",
+      "category": "Trending",
+      "price": 11.99,
+      "rating": 5.0,
+      "delivery_time": "24min",
+      "image": "https://example.com/images/double-cheese-burger.jpg"
+    },
+    {
+      "id": 301,
+      "restaurant_id": 3,
+      "name": "Grilled Salmon",
+      "category": "Supreme",
+      "price": 19.99,
+      "rating": 4.8,
+      "delivery_time": "30min",
+      "image": "https://example.com/images/grilled-salmon.jpg"
+    }
   ]
 }

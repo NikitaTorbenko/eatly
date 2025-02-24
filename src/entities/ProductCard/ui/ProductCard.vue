@@ -1,28 +1,35 @@
 <script setup lang="ts">
-// import { ref } from 'vue'
+import type { IProduct } from "@/shared/types";
+import { computed } from "vue";
 
-// interface Props {
+const props = defineProps<IProduct>();
 
-// }
+const integerPart = computed(() => Math.floor(props.price));
+const decimalPart = computed(() => {
+  const decimal = (props.price % 1).toFixed(2).split(".")[1];
+  return decimal ? decimal : "00";
+});
 </script>
 
 <template>
   <div class="card">
     <div class="card-img">
       <img class="heart" src="../assets/icons/heart.svg" alt="" />
-      <img class="food-img" src="../assets/food/foodp.png" alt="" />
-      <div class="food-type">Healthy</div>
+      <img class="food-img" :src="props.image" alt="" />
+      <div class="food-type">{{ props.category }}</div>
     </div>
     <div class="card-text">
-      <p class="text-title">Chicken Hell</p>
+      <p class="text-title">{{ props.name }}</p>
       <div class="text-content">
-        <p class="text-time">24min •</p>
+        <p class="text-time">{{ props.delivery_time }} •</p>
         <img class="star-img" src="../assets/icons/star.png" alt="" />
-        <div class="text-rate">4.8</div>
+        <div class="text-rate">{{ props.rating }}</div>
       </div>
     </div>
     <div class="card-button">
-      <p class="card-price">$12<span class="second-price">.99</span></p>
+      <p class="card-price">
+        ${{ integerPart }}<span class="second-price">.{{ decimalPart }}</span>
+      </p>
       <button class="card-buy">
         <img class="plus-button" src="../assets/icons/plus.svg" alt="" />
       </button>
