@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Faqs } from "@/entities/Faqs";
+</script>
 
 <template>
   <div class="blogs">
