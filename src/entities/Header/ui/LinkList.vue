@@ -13,7 +13,7 @@ import { links } from "@/shared/consts";
 </template>
 
 <style scoped lang="scss">
-@use "@/app/styles/variables" as v;
+@use "@/shared/styles/variables" as v;
 
 .link-list {
   display: none;

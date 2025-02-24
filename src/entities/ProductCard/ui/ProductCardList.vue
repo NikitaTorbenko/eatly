@@ -27,7 +27,7 @@ import ProductCard from "./ProductCard.vue";
 </template>
 
 <style scoped lang="scss">
-@use "@/app/styles/variables" as v;
+@use "@/shared/styles/variables" as v;
 
 .list-title {
   margin: 85px 124px 60px 124px;

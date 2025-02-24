@@ -21,7 +21,7 @@ import FooterTabletMedia from "./FooterTabletMedia.vue";
 </template>
 
 <style scoped lang="scss">
-@use "@/app/styles/variables" as v;
+@use "@/shared/styles/variables" as v;
 
 .footer {
   &-tablet {

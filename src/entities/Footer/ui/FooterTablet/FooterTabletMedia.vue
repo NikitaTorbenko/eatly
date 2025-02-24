@@ -15,7 +15,7 @@ import { imgs } from "../../consts";
 </template>
 
 <style scoped lang="scss">
-@use "@/app/styles/variables" as v;
+@use "@/shared/styles/variables" as v;
 
 .footer-links {
   display: flex;

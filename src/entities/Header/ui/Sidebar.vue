@@ -13,7 +13,11 @@ const { visible } = storeToRefs(store);
   <Drawer v-model:visible="visible" position="right" style="width: 100%">
     <div class="sidebar">
       <div class="sidebar-top">
-        <div class="sidebar-item" v-for="item in links">
+        <div
+          @click="store.closeSidebar"
+          class="sidebar-item"
+          v-for="item in links"
+        >
           <router-link :to="item.link" class="sidebar-link">
             {{ item.title }}
           </router-link>

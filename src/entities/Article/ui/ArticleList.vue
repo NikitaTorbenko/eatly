@@ -19,7 +19,7 @@ import Article from "./Article.vue";
 </template>
 
 <style scoped lang="scss">
-@use "@/app/styles/variables" as v;
+@use "@/shared/styles/variables" as v;
 
 .article-list {
   display: grid;

@@ -18,7 +18,7 @@ import Arrow from "../assets/img/arrow.vue";
 </template>
 
 <style scoped lang="scss">
-@use "@/app/styles/variables" as v;
+@use "@/shared/styles/variables" as v;
 
 .preview {
   max-width: 330px;

@@ -35,7 +35,7 @@ import FloatLabel from "primevue/floatlabel";
 </template>
 
 <style scoped lang="scss">
-@use "@/app/styles/variables" as v;
+@use "@/shared/styles/variables" as v;
 
 .contact-form {
   display: flex;

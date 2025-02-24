@@ -40,7 +40,7 @@ onMounted(getFaqsHandler);
 </template>
 
 <style scoped lang="scss">
-@use "@/app/styles/variables" as v;
+@use "@/shared/styles/variables" as v;
 
 :deep(.p-accordionheader) {
   padding-top: 15px;

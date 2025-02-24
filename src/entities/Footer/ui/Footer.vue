@@ -24,7 +24,7 @@ import FooterTablet from "./FooterTablet/FooterTablet.vue";
 </template>
 
 <style lang="scss" scoped>
-@use "@/app/styles/variables" as v;
+@use "@/shared/styles/variables" as v;
 
 .footer {
   background-color: #efefef;

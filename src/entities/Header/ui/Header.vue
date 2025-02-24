@@ -41,7 +41,7 @@ const { visible } = storeToRefs(store);
 </template>
 
 <style scoped lang="scss">
-@use "@/app/styles/variables" as v;
+@use "@/shared/styles/variables" as v;
 
 .sign {
   display: none;

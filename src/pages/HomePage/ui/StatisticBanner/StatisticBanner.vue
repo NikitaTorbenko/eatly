@@ -35,7 +35,7 @@
 </template>
 
 <style scoped lang="scss">
-@use "@/app/styles/variables" as v;
+@use "@/shared/styles/variables" as v;
 
 .statistic-banner {
   background-color: var(--p-primary-600);

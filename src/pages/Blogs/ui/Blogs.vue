@@ -11,7 +11,7 @@ import { Faqs } from "@/entities/Faqs";
 </template>
 
 <style scoped lang="scss">
-@use "@/app/styles/variables" as v;
+@use "@/shared/styles/variables" as v;
 
 .container {
   margin-bottom: 95px;
