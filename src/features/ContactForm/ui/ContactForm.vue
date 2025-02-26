@@ -69,10 +69,6 @@ import FloatLabel from "primevue/floatlabel";
   }
 }
 
-.purple {
-  color: var(--p-primary-600);
-}
-
 .float-label {
   margin-top: 12px;
   margin-bottom: 50px;

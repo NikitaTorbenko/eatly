@@ -109,8 +109,4 @@ onMounted(getFaqsHandler);
     font-size: 20px;
   }
 }
-
-.purple {
-  color: var(--p-primary-800);
-}
 </style>

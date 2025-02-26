@@ -7,7 +7,7 @@ import Logo from "../assets/img/Logo.png";
     <router-link to="/">
       <div class="logo-inner">
         <img class="logo-icon" :src="Logo" alt="" />
-        <h1 class="logo-title text-purple-800">eatly</h1>
+        <h1 class="logo-title purple">eatly</h1>
       </div>
     </router-link>
   </div>
@@ -24,7 +24,6 @@ import Logo from "../assets/img/Logo.png";
   &-title {
     font-weight: 600;
     font-size: 21px;
-    color: var(--p-purple-800);
   }
 }
 </style>
