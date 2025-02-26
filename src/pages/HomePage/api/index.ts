@@ -1,1 +1,1 @@
-export { getProductList } from "./getProductList";
+export { getPopularProducts } from "./getPopularProduct";

@@ -18,21 +18,23 @@ const decimalPart = computed(() => {
       <img class="food-img" :src="props.image" alt="" />
       <div class="food-type">{{ props.category }}</div>
     </div>
-    <div class="card-text">
-      <p class="text-title">{{ props.name }}</p>
-      <div class="text-content">
-        <p class="text-time">{{ props.delivery_time }} •</p>
-        <img class="star-img" src="../assets/icons/star.png" alt="" />
-        <div class="text-rate">{{ props.rating }}</div>
+    <div class="card-content">
+      <div class="card-text">
+        <p class="text-title">{{ props.name }}</p>
+        <div class="text-content">
+          <p class="text-time">{{ props.delivery_time }} •</p>
+          <img class="star-img" src="../assets/icons/star.png" alt="" />
+          <div class="text-rate">{{ props.rating }}</div>
+        </div>
       </div>
-    </div>
-    <div class="card-button">
-      <p class="card-price">
-        ${{ integerPart }}<span class="second-price">.{{ decimalPart }}</span>
-      </p>
-      <button class="card-buy">
-        <img class="plus-button" src="../assets/icons/plus.svg" alt="" />
-      </button>
+      <div class="card-button">
+        <p class="card-price">
+          ${{ integerPart }}<span class="second-price">.{{ decimalPart }}</span>
+        </p>
+        <button class="card-buy">
+          <img class="plus-button" src="../assets/icons/plus.svg" alt="" />
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -41,6 +43,9 @@ const decimalPart = computed(() => {
 @use "@/shared/styles/variables" as v;
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   background-color: #ffffff;
   border: 1px solid rgb(244, 244, 246);
@@ -56,6 +61,7 @@ const decimalPart = computed(() => {
     width: 220px;
   }
 }
+
 .card-img {
   padding: 17px 12px 7px 4px;
 
@@ -67,6 +73,7 @@ const decimalPart = computed(() => {
     padding: 26px 18px 11px 6px;
   }
 }
+
 .heart {
   position: absolute;
   right: 15px;
@@ -75,6 +82,7 @@ const decimalPart = computed(() => {
     width: 22px;
   }
 }
+
 .food-img {
   width: 130px;
   height: 135px;
@@ -87,6 +95,7 @@ const decimalPart = computed(() => {
     width: 200px;
   }
 }
+
 .food-type {
   position: absolute;
   left: 14px;
@@ -115,14 +124,24 @@ const decimalPart = computed(() => {
     line-height: 17px;
   }
 }
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .card-text {
   padding: 0px 36px 9px 15px;
 }
+
 .text-content {
   display: flex;
   align-items: center;
   gap: 4px;
 }
+
 .text-title {
   color: rgb(50, 49, 66);
   font-size: 15px;
@@ -141,6 +160,7 @@ const decimalPart = computed(() => {
     line-height: 37px;
   }
 }
+
 .text-time,
 .text-rate {
   color: #8e93a6;
@@ -160,17 +180,20 @@ const decimalPart = computed(() => {
     line-height: 23px;
   }
 }
+
 .star-img {
   width: 10px;
   height: 12px;
   padding-bottom: 2px;
 }
+
 .card-button {
   padding: 0px 18px 19px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .card-price,
 .second-price {
   color: #323142;
@@ -190,6 +213,7 @@ const decimalPart = computed(() => {
     line-height: 40px;
   }
 }
+
 .second-price {
   color: #8e97a6;
   font-size: 12px;
@@ -202,6 +226,7 @@ const decimalPart = computed(() => {
     font-size: 19px;
   }
 }
+
 .card-buy {
   display: flex;
   align-items: center;
@@ -211,6 +236,7 @@ const decimalPart = computed(() => {
   font-size: 15px;
   color: white;
 }
+
 .plus-button {
   width: 15px;
   height: 15px;

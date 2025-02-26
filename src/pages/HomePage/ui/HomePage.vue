@@ -1,71 +1,35 @@
 <script setup lang="ts">
+import { onMounted, ref } from "vue";
+import { getPopularProducts } from "../api";
 import { ProductList } from "@/widgets/ProductList";
 import StatisticBanner from "./StatisticBanner/StatisticBanner.vue";
+import type { IProduct } from "@/shared/types";
 
-const testList = [
-  {
-    id: 101,
-    name: "Chicken Hell",
-    category: "Healthy",
-    price: 12.99,
-    rating: 4.8,
-    delivery_time: "24min",
-    image: "https://example.com/images/chicken-hell.jpg",
-  },
-  {
-    id: 102,
-    name: "Swe Dish",
-    category: "Trending",
-    price: 19.99,
-    rating: 4.9,
-    delivery_time: "34min",
-    image: "https://example.com/images/swe-dish.jpg",
-  },
-  {
-    id: 101,
-    name: "Chicken Hell",
-    category: "Healthy",
-    price: 12.99,
-    rating: 4.8,
-    delivery_time: "24min",
-    image: "https://example.com/images/chicken-hell.jpg",
-  },
-  {
-    id: 102,
-    name: "Swe Dish",
-    category: "Trending",
-    price: 19.99,
-    rating: 4.9,
-    delivery_time: "34min",
-    image: "https://example.com/images/swe-dish.jpg",
-  },
-  {
-    id: 101,
-    name: "Chicken Hell",
-    category: "Healthy",
-    price: 12.99,
-    rating: 4.8,
-    delivery_time: "24min",
-    image: "https://example.com/images/chicken-hell.jpg",
-  },
-  {
-    id: 102,
-    name: "Swe Dish",
-    category: "Trending",
-    price: 19.99,
-    rating: 4.9,
-    delivery_time: "34min",
-    image: "https://example.com/images/swe-dish.jpg",
-  },
-];
+const popularProducts = ref<IProduct[]>([]);
+
+const getPopularProductsHandler = async () => {
+  const { data } = await getPopularProducts();
+  popularProducts.value = data;
+};
+
+onMounted(getPopularProductsHandler);
 </script>
 
 <template>
-  <div class="">
+  <div class="home">
     <StatisticBanner />
+
+    <!-- это остается тут -->
     <ProductList
       title="Our Top Dishes"
-      :product-list="testList"
+      :product-list="popularProducts"
+      is-view-all
+      view-all-position="bottom"
+    />
+    <!-- Это для второй главной (если смотреть на макет) -->
+    <ProductList
+      title="Our Top Dishes"
+      :product-list="popularProducts"
       is-view-all
       view-all-position="top"
     />

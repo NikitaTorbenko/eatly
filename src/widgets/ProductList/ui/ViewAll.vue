@@ -1,11 +1,3 @@
-<script setup lang="ts">
-// import { ref } from 'vue'
-
-// interface Props {
-
-// }
-</script>
-
 <template>
   <div class="veiw">
     <router-link to="/" class="veiw-text">View All</router-link>

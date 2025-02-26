@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import type { IProduct } from "@/shared/types";
 import ViewAll from "./ViewAll.vue";
+import type { IProduct } from "@/shared/types";
 import { ProductCard } from "@/entities/ProductCard";
+import { computed } from "vue";
 
 interface Props {
   title: string;
@@ -13,18 +14,19 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   isViewAll: false,
 });
+
+const headerCenter = computed(() => {
+  if (props.viewAllPosition && props.viewAllPosition === "bottom")
+    return "header-center";
+
+  return "";
+});
 </script>
 
 <template>
   <div class="products-list">
     <div class="container">
-      <div
-        class="header"
-        :class="
-          (props.viewAllPosition && props.viewAllPosition === 'bottom') ??
-          'header-center'
-        "
-      >
+      <div class="header" :class="headerCenter">
         <h2 class="title">{{ props.title }}</h2>
         <ViewAll v-if="props.isViewAll && props.viewAllPosition === 'top'" />
       </div>
@@ -45,6 +47,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 .products-list {
   margin-top: 100px;
+  margin-bottom: 120px;
 }
 
 .header {
