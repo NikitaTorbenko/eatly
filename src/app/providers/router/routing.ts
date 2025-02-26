@@ -7,11 +7,6 @@ export const routes = [
   { path: "/auth", component: Auth, name: "Auth" },
   { path: "/login", component: Login, name: "Login" },
   {
-    path: "/about",
-    component: () => import("@/pages/AboutPage/ui/AboutPage.vue"),
-    name: "AboutPage",
-  },
-  {
     path: "/blogs",
     component: () => import("@/pages/Blogs/ui/Blogs.vue"),
     name: "Blogs",

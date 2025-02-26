@@ -7,8 +7,8 @@
 </script>
 
 <template>
-  <div class="container">
-    <div class="statistic-banner">
+  <div class="statistic-banner">
+    <div class="container statistic-banner-inner">
       <div class="customers">
         <span class="counts-customers">10K+</span>
         <p class="customers-info">
@@ -39,16 +39,19 @@
 
 .statistic-banner {
   background-color: var(--p-primary-600);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  @media (min-width: v.$tablet) {
+  &-inner {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
+
+    @media (min-width: v.$tablet) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
   }
 }
 

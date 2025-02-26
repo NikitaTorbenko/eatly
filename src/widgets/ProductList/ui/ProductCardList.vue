@@ -1,35 +1,26 @@
-<script setup lang="ts">
-import ProductCard from "./ProductCard.vue";
-// import { ref } from 'vue'
-
-// interface Props {
-
-// }
-</script>
-
 <template>
-  <div class="product-list">
-    <h1 class="list-title">
-      Our Top
-      <span class="dishes">Dishes</span>
-    </h1>
-    <div class="card-list">
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-    </div>
-    <div class="veiw">
-      <p class="veiw-text">View All</p>
-      <img src="#" alt="" />
-    </div>
-  </div>
+  <Myprops title="fasd" object="asdad" />
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import Myprops from "@/entities/ProductCard/ui/Pro/Myprops.vue";
+import { ProductCard } from "@/entities/ProductCard";
+
+export default defineComponent({
+  components: {
+    Myprops,
+  },
+});
+</script>
 
 <style scoped lang="scss">
 @use "@/shared/styles/variables" as v;
 
-.list-title {
+.title {
+  font-size: 55px;
+}
+/* .list-title {
   margin: 85px 124px 60px 124px;
   text-align: center;
   font-size: 30px;
@@ -95,4 +86,6 @@ import ProductCard from "./ProductCard.vue";
     line-height: 45px;
   }
 }
+
+ */
 </style>
