@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import ViewAll from "./ViewAll.vue";
 import type { IProduct } from "@/shared/types";
 import { ProductCard } from "@/entities/ProductCard";
-import { computed } from "vue";
 
 interface Props {
   title: string;
@@ -27,7 +27,7 @@ const headerCenter = computed(() => {
   <div class="products-list">
     <div class="container">
       <div class="header" :class="headerCenter">
-        <h2 class="title">{{ props.title }}</h2>
+        <h2 class="title" v-html="props.title" />
         <ViewAll v-if="props.isViewAll && props.viewAllPosition === 'top'" />
       </div>
       <div class="card-list">

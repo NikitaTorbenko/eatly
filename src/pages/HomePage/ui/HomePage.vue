@@ -21,7 +21,7 @@ onMounted(getPopularProductsHandler);
 
     <!-- это остается тут -->
     <ProductList
-      title="Our Top Dishes"
+      title='Our Top <span class="purple">Dishes</span>'
       :product-list="popularProducts"
       is-view-all
       view-all-position="bottom"
@@ -33,6 +33,7 @@ onMounted(getPopularProductsHandler);
       is-view-all
       view-all-position="top"
     />
+    <ProductList title="Our Top Dishes" :product-list="popularProducts" />
   </div>
 </template>
 
