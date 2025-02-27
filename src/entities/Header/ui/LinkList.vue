@@ -5,7 +5,7 @@ import { links } from "@/shared/consts";
 <template>
   <div class="link-list">
     <div class="link-item" v-for="item in links" :key="item.title">
-      <router-link :to="item.link">
+      <router-link :to="item.link" class="purple">
         {{ item.title }}
       </router-link>
     </div>
