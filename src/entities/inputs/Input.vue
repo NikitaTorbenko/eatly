@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import { ref } from "vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="block">
@@ -14,15 +12,8 @@ import { ref } from "vue";
     </div>
     <div class="password">
       <input class="password-text" type="text" placeholder="Password" />
-      <img
-        class="password-img"
-        src="../inputs/assets/icons/password.svg"
-        alt=""
-      />
+      <img class="password-img" src="./assets/icons/password.svg" alt="" />
     </div>
-    <br />
-
-    <h1>fffffffffffff</h1>
   </div>
 </template>
 

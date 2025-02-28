@@ -1,9 +1,9 @@
-import { HomePage } from "@/pages/HomePage";
+import { Home } from "@/pages/Home";
 import { Auth } from "@/pages/Auth";
 import { Login } from "@/pages/Login";
 
 export const routes = [
-  { path: "/", component: HomePage, name: "Home" },
+  { path: "/", component: Home, name: "Home" },
   { path: "/auth", component: Auth, name: "Auth" },
   { path: "/login", component: Login, name: "Login" },
   {
@@ -13,7 +13,7 @@ export const routes = [
   },
   {
     path: "/contact",
-    component: () => import("@/pages/ContactPage/ui/ContactPage.vue"),
+    component: () => import("@/pages/Contact/ui/Contact.vue"),
     name: "ContactPage",
   },
 ];
