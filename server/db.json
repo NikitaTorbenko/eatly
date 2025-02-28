@@ -169,7 +169,7 @@
       "category": "Healthy",
       "rating": 4.8,
       "delivery_time": "24min",
-      "image": "https://example.com/images/chicken-king.jpg",
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/12832c43292781.57ea452decf68.jpg",
       "dishes": [101, 102]
     },
     {
@@ -178,7 +178,7 @@
       "category": "Trending",
       "rating": 4.9,
       "delivery_time": "24min",
-      "image": "https://example.com/images/burger-king.jpg",
+      "image": "https://yandex-images.clstorage.net/iEG501u89/3fbc48NKS6zV/y7Wx5EFtgeV2KlLLszzji8eEhqnfopLKrJSBpFZf1O-PO0GFInO1Lt6YKl5uYmSauwZKEOsRdXaOjLKW_g9opw7VkGE1KAWwUm-2u7NtpztjRSZo3vZTHp01pCSVPGMt_S2DUwX0x9kPLR-rOwO1Xupg7OTadiITPcmyYGh53kZ80saW8Z3BhdQ7pwgh7rZLNpYmCw00UNpe4dJT9kwSf5-s8VKmVBW7Di-cOWjCYQ-ZEB6Cu4RRMY6bM-ObOI2ULnM31_K-sLTkqGSrMY3n-8V1xHvdREFbrkNhkqaMEf2f3yNTVVYnaI38XyhIICL9S8J_Udg08uPM2LLwyCg8RE6TVBZzT7DVhclHiZHP5loG9SYY34Ria_8RYKO03-CdPozB4SV0BdtOzSxbq5DBLUlhjiKbVxEA79iCEUhov3e-0NQEgV1ydTRr54hD7fRL92dUeC6n4GjPghKzN9wQDP18kRLndFTqzKxduwjC8RzaIf5COdTwIJ_582Npi-zlboOGBrLew-cXeiY6c93GaWcm17nMlDILbUIyQPaMwR9uDFDTVmWFKX2_vitpMIHu60IcUau10lFcSJChWVi9duzidQVifzBEJAomixPcdvil12drrJbzCXzBY3OW3hKvT90yk4YHNcpMbjwoS7ETr_nRbIArpKHxPksQ8Osrz7Q9YYYXca9xh1UoRpjiD3RbRQfFivyEQurtUUNBVd_RDs29YIEXNpe4vGxPq-kg4I-7ce6Di6fRYi5pobHb2NxGfPP0J9FOsQXXmSQbw4ylOzQ392vNFDO77-ExIURPcK0_PdLBRQfVaG2ef1mKcmAsyjA-MsgWwRFfqxASWgp9Ve8zZwSiHwHVJ1uHuyEPBQlF9kfKraXQO86BMKGELIFvby7BIxfnl6hszK_4-XGTXtviTfDJd1NBf7uCAduJ7TWMg3RHQG7x10SIVprgbUeZ1PZ0mUwEAMjucvMRU",
       "dishes": [201, 202]
     },
     {
@@ -187,7 +187,7 @@
       "category": "Supreme",
       "rating": 4.7,
       "delivery_time": "30min",
-      "image": "https://example.com/images/supreme-seafood.jpg",
+      "image": "https://i.pinimg.com/originals/d4/d1/6f/d4d16f13b99845024e321f00f5af98ba.jpg",
       "dishes": [301, 302]
     }
   ],
@@ -200,7 +200,7 @@
       "price": 12.99,
       "rating": 4.8,
       "delivery_time": "24min",
-      "image": "https://example.com/images/chicken-hell.jpg"
+      "image": "https://i.pinimg.com/736x/f4/43/3e/f4433e2dfab7a76dcc37f1e7137fb6fd.jpg"
     },
     {
       "id": 102,
@@ -210,7 +210,7 @@
       "price": 19.99,
       "rating": 4.9,
       "delivery_time": "34min",
-      "image": "https://example.com/images/swe-dish.jpg"
+      "image": "https://t3.ftcdn.net/jpg/02/50/77/62/360_F_250776227_JzQgO3gkTWj9Oxp4ynRoBYv3jyUEFHWP.jpg"
     },
     {
       "id": 201,
@@ -220,7 +220,7 @@
       "price": 9.99,
       "rating": 4.9,
       "delivery_time": "24min",
-      "image": "https://example.com/images/classic-burger.jpg"
+      "image": "https://w7.pngwing.com/pngs/223/626/png-transparent-cheeseburger-hamburger-french-fries-breakfast-sandwich-veggie-burger-burger-plate.png"
     },
     {
       "id": 202,
@@ -230,7 +230,7 @@
       "price": 11.99,
       "rating": 5.0,
       "delivery_time": "24min",
-      "image": "https://example.com/images/double-cheese-burger.jpg"
+      "image": "https://thumbs.dreamstime.com/b/double-cheese-burger-beer-dark-wooden-table-top-123765866.jpg"
     },
     {
       "id": 301,
@@ -250,7 +250,7 @@
       "price": 29.99,
       "rating": 5.0,
       "delivery_time": "30min",
-      "image": "https://example.com/images/lobster-special.jpg"
+      "image": "https://i.pinimg.com/736x/fa/7c/2a/fa7c2a4ad563109513e9322efc6ff0e3.jpg"
     }
   ],
   "popular_dishes": [
@@ -262,7 +262,7 @@
       "price": 12.99,
       "rating": 4.8,
       "delivery_time": "24min",
-      "image": "https://example.com/images/chicken-hell.jpg"
+      "image": "https://i.pinimg.com/originals/75/52/ae/7552ae766930f1b7b5974483f377b83b.png"
     },
     {
       "id": 202,
@@ -272,7 +272,7 @@
       "price": 11.99,
       "rating": 5.0,
       "delivery_time": "24min",
-      "image": "https://example.com/images/double-cheese-burger.jpg"
+      "image": "https://thumbs.dreamstime.com/b/double-cheese-burger-beer-dark-wooden-table-top-123765866.jpg"
     },
     {
       "id": 301,
@@ -282,7 +282,27 @@
       "price": 19.99,
       "rating": 4.8,
       "delivery_time": "30min",
-      "image": "https://example.com/images/grilled-salmon.jpg"
+      "image": "https://thumbs.dreamstime.com/b/plate-grilled-salmon-steak-vegetables-wooden-table-95783099.jpg"
+    },
+    {
+      "id": 401,
+      "restaurant_id": 4,
+      "name": "Swe Dish",
+      "category": "Healthy",
+      "price": 12.99,
+      "rating": 4.8,
+      "delivery_time": "24min",
+      "image": "https://avatars.mds.yandex.net/i?id=b0d73129e33fb007673a2d4e1cc3df89_l-10501287-images-thumbs&n=13"
+    },
+    {
+      "id": 402,
+      "restaurant_id": 5,
+      "name": "Double Cheese Burger",
+      "category": "Trending",
+      "price": 11.99,
+      "rating": 5.0,
+      "delivery_time": "24min",
+      "image": "https://avatars.mds.yandex.net/i?id=0674d5985394edc9dfa59ed5ad064116_l-5865789-images-thumbs&n=13"
     }
   ]
 }

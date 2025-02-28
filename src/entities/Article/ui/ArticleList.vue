@@ -1,10 +1,10 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import Article from "./Article.vue";
-// import { ref } from 'vue'
 
-// interface Props {
-
-// }
+interface props {
+  title: string;
+}
 </script>
 
 <template>
@@ -40,9 +40,6 @@ import Article from "./Article.vue";
     justify-content: space-evenly;
     column-gap: 77px;
     row-gap: 70px;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;*/
   }
 }
 </style>

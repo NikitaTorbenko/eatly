@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import type { IProduct } from "@/shared/types";
-import { ProductCard } from "@/entities/ProductCard";
+import type { IRestaurant } from "@/shared/types";
+import { RestaurantCard } from "@/entities/RestaurantCard";
 import { ViewAll } from "@/entities/ViewAll";
 
 interface Props {
   title: string;
-  productList: IProduct[];
+  restaurantList: IRestaurant[];
   isViewAll?: boolean;
   viewAllPosition?: "bottom" | "top";
 }
@@ -24,15 +24,18 @@ const headerCenter = computed(() => {
 </script>
 
 <template>
-  <div class="products-list">
+  <div class="restaunrants">
     <div class="container">
       <div class="header" :class="headerCenter">
         <h2 class="title" v-html="props.title" />
-        <ViewAll url="/" v-if="props.isViewAll && props.viewAllPosition === 'top'" />
+        <ViewAll
+          url="/"
+          v-if="props.isViewAll && props.viewAllPosition === 'top'"
+        />
       </div>
-      <div class="card-list">
-        <ProductCard
-          v-for="item in props.productList"
+      <div class="restaurant-list">
+        <RestaurantCard
+          v-for="item in props.restaurantList"
           :key="item.id"
           v-bind="item"
         />
@@ -48,19 +51,27 @@ const headerCenter = computed(() => {
 <style scoped lang="scss">
 @use "@/shared/styles/variables" as v;
 
-.products-list {
-  margin-top: 100px;
-  margin-bottom: 120px;
-}
-
 .header {
+  margin-top: 140px;
+  margin-bottom: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 75px;
+}
 
-  &-center {
-    justify-content: center;
+.restaurant-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (min-width: v.$tablet) {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  @media (min-width: v.$desctop) {
+    gap: 30px;
   }
 }
 
@@ -78,26 +89,6 @@ const headerCenter = computed(() => {
   @media (min-width: v.$desctop) {
     font-size: 45px;
     line-height: 26px;
-  }
-}
-
-.card-list {
-  padding: 0px 30px;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 40px;
-  column-gap: 20px;
-
-  margin-bottom: 66px;
-
-  @media (min-width: v.$tablet) {
-    column-gap: 20px;
-  }
-
-  @media (min-width: v.$desctop) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
   }
 }
 </style>

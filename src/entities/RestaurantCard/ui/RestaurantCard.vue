@@ -1,30 +1,25 @@
 <script setup lang="ts">
-import { OutProps } from "vue";
+import type { IRestaurant } from "@/shared/types";
 
-/* const OutProps = {
-  ImgUrl:string;
-  title: string;
-  time:string;
-  rate:string;
-}; */
+const props = defineProps<IRestaurant>();
 </script>
 
 <template>
   <div class="restaurant-card">
     <div class="card-img">
-      <img class="food-img" src="../assets/food/food.png" />
+      <img class="food-img" :src="props.image" />
     </div>
     <div class="card-text">
       <div class="food-category">
-        <p class="food-type">Trending</p>
+        <p class="food-type">{{ props.category }}</p>
       </div>
       <div class="card-info">
         <div class="info-title">
-          <h1 class="title">The Burger King</h1>
+          <h1 class="title">{{ props.name }}</h1>
           <div class="info-text">
-            <p class="info-time">24min •</p>
+            <p class="info-time">{{ props.delivery_time }} •</p>
             <img class="info-img" src="../assets/icons/star.svg" alt="" />
-            <p class="info-time">4.9</p>
+            <p class="info-time">{{ props.rating }}</p>
           </div>
         </div>
         <div class="favourite">
@@ -117,7 +112,7 @@ import { OutProps } from "vue";
 
 .card-text {
   border: 1px solid #f4f4f6;
-  background-color: red;
+
   height: 150px;
 }
 

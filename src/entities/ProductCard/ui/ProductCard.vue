@@ -46,7 +46,6 @@ const decimalPart = computed(() => {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
   background-color: #ffffff;
   border: 1px solid rgb(244, 244, 246);
   border-radius: 23px;
@@ -63,6 +62,7 @@ const decimalPart = computed(() => {
 }
 
 .card-img {
+  position: relative;
   padding: 17px 12px 7px 4px;
 
   @media (min-width: v.$tablet) {
@@ -86,6 +86,7 @@ const decimalPart = computed(() => {
 .food-img {
   width: 130px;
   height: 135px;
+  border-radius: 5px;
 
   @media (min-width: v.$tablet) {
     width: 145px;
@@ -99,7 +100,8 @@ const decimalPart = computed(() => {
 .food-type {
   position: absolute;
   left: 14px;
-  bottom: 105px;
+  bottom: 0px;
+
   display: inline;
   padding: 3px 5px;
   color: rgb(218, 163, 26);
@@ -117,7 +119,7 @@ const decimalPart = computed(() => {
   }
 
   @media (min-width: v.$desctop) {
-    bottom: 128px;
+    bottom: 0px;
     padding: 3px 7px;
     font-size: 11px;
     font-weight: 400;

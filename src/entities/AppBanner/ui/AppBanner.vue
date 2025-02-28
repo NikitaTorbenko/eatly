@@ -34,7 +34,6 @@ import Button from "primevue/button";
             icon="pi pi-arrow-right"
             icon-pos="right"
           />
-          <!-- <button class="button-download"></button> -->
         </div>
       </div>
     </div>

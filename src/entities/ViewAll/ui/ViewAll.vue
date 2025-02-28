@@ -1,6 +1,14 @@
+<script setup lang="ts">
+interface Props {
+  url: string;
+}
+
+const props = defineProps<Props>();
+</script>
+
 <template>
   <div class="veiw">
-    <router-link to="/" class="veiw-text">View All</router-link>
+    <router-link :to="props.url" class="veiw-text">View All</router-link>
   </div>
 </template>
 

@@ -1,31 +1,28 @@
 <script setup lang="ts">
-// import { ref } from 'vue'
-
-// interface Props {
-
-// }
+import type { IArticle } from "@/shared/types/IArticle";
+const props = defineProps<IArticle>();
 </script>
 
 <template>
   <div class="article">
     <div class="article-img">
-      <img class="background-img" src="../assets/imgs/background.png" alt="" />
+      <img class="background-img" :src="props.image" alt="" />
     </div>
     <div class="article-text">
-      <p class="article-title">How To Track The Order ?</p>
+      <p class="article-title">{{ props.title }}</p>
     </div>
     <div class="article-information">
       <div class="article-person">
         <div class="person-logo">
-          <img class="logo" src="../assets/people/person.png" alt="" />
+          <img class="logo" :src="props.author" alt="" />
           <p class="logo-text">
             Written By <br />
-            <span class="name">Perperzon</span>
+            <span class="name">{{ props.author }}</span>
           </p>
         </div>
       </div>
       <div class="article-time">
-        <div class="time">15 DEC, 2022</div>
+        <div class="time">{{ props.date }}</div>
       </div>
     </div>
   </div>
