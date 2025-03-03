@@ -18,6 +18,7 @@
       "id": 1,
       "title": "How To Order Food?",
       "author": "Perperzon",
+      "author_image": "#",
       "date": "15 DEC, 2022",
       "image": "https://example.com/images/blog1.jpg",
       "content": [
@@ -40,6 +41,7 @@
       "id": 2,
       "title": "How To Track The Order?",
       "author": "Perperzon",
+      "author_image": "#",
       "date": "15 DEC, 2022",
       "image": "https://example.com/images/blog2.jpg",
       "content": [
@@ -62,6 +64,7 @@
       "id": 3,
       "title": "How To Manage Cards?",
       "author": "Perperzon",
+      "author_image": "#",
       "date": "15 DEC, 2022",
       "image": "https://example.com/images/blog3.jpg",
       "content": [
@@ -84,6 +87,7 @@
       "id": 4,
       "title": "Tips & Tricks For Business",
       "author": "Perperzon",
+      "author_image": "#",
       "date": "15 DEC, 2022",
       "image": "https://example.com/images/blog4.jpg",
       "content": [
@@ -102,6 +106,7 @@
       "id": 5,
       "title": "How To Control Money?",
       "author": "Perperzon",
+      "author_image": "#",
       "date": "15 DEC, 2022",
       "image": "https://example.com/images/blog5.jpg",
       "content": [
@@ -120,6 +125,7 @@
       "id": 6,
       "title": "Top 5 Business Ideas",
       "author": "Perperzon",
+      "author_image": "#",
       "date": "15 DEC, 2022",
       "image": "https://example.com/images/blog6.jpg",
       "content": [

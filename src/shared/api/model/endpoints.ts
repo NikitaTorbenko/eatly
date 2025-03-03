@@ -4,6 +4,7 @@ enum enumEndpoints {
   RESTAURANTS = "RESTAURANTS",
   RESTAURANT = "RESTAURANT",
   PRODUCTS = "PRODUCTS",
+  BLOGS = "BLOGS",
 }
 
 export const Endpoints: Record<enumEndpoints, string> = {
@@ -12,4 +13,5 @@ export const Endpoints: Record<enumEndpoints, string> = {
   [enumEndpoints.RESTAURANTS]: "/restaurants",
   [enumEndpoints.RESTAURANT]: "/restaurant/:id",
   [enumEndpoints.PRODUCTS]: "/dishes?restaurant_id=",
+  [enumEndpoints.BLOGS]: "/blogs",
 };

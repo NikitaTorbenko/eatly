@@ -1,1 +1,1 @@
-import { Article } from "/ui";
+export { Article } from "./ui";

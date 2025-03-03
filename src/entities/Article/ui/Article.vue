@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import type { IArticle } from "@/shared/types/IArticle";
+import type { IArticle } from "@/shared/types";
+
 const props = defineProps<IArticle>();
 </script>
 
@@ -14,7 +15,7 @@ const props = defineProps<IArticle>();
     <div class="article-information">
       <div class="article-person">
         <div class="person-logo">
-          <img class="logo" :src="props.author" alt="" />
+          <img class="logo" :src="props.authorImage" alt="" />
           <p class="logo-text">
             Written By <br />
             <span class="name">{{ props.author }}</span>

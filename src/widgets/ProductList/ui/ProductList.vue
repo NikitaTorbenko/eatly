@@ -28,7 +28,10 @@ const headerCenter = computed(() => {
     <div class="container">
       <div class="header" :class="headerCenter">
         <h2 class="title" v-html="props.title" />
-        <ViewAll url="/" v-if="props.isViewAll && props.viewAllPosition === 'top'" />
+        <ViewAll
+          url="/"
+          v-if="props.isViewAll && props.viewAllPosition === 'top'"
+        />
       </div>
       <div class="card-list">
         <ProductCard
