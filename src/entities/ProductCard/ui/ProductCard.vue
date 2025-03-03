@@ -14,7 +14,7 @@ const decimalPart = computed(() => {
 <template>
   <div class="card">
     <div class="card-img">
-      <img class="heart" src="../assets/icons/heart.svg" alt="" />
+      <img class="heart" src="../assets/icons/favoriteSvg.svg" alt="" />
       <img class="food-img" :src="props.image" alt="" />
       <div class="food-type">{{ props.category }}</div>
     </div>
