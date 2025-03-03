@@ -62,6 +62,7 @@ const decimalPart = computed(() => {
 }
 
 .card-img {
+  object-fit: contain;
   position: relative;
   padding: 17px 12px 7px 4px;
 
