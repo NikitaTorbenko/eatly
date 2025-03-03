@@ -39,50 +39,57 @@ const props = defineProps<IRestaurant>();
 
 .restaurant-card {
   margin-bottom: 100px;
-  width: 100%;
   height: 236px;
-  max-width: 390px;
+  width: 315px;
   border-radius: 24px;
   overflow: hidden;
+
   @media (min-width: v.$tablet) {
     width: 280px;
+    height: 220px;
     border-radius: 21px;
   }
 
   @media (min-width: v.$desctop) {
     width: 395px;
+    height: 297px;
     border-radius: 30px;
     border: 1.25px;
   }
 }
 
 .card-img {
-  height: 140px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 100%;
 }
 
 .food-img {
-  width: 100%;
-  height: 140px;
+  object-fit: cover;
+  width: 315px;
+  height: 176px;
+
+  @media (min-width: v.$tablet) {
+    height: 125px;
+    width: 281px;
+  }
+
+  @media (min-width: v.$desctop) {
+    height: 176px;
+    width: 395px;
+  }
 }
 
 .food-category {
-  margin-top: 15px;
-  margin-left: 27px;
   display: inline-block;
   background-color: #f7c5ba;
   padding: 2px 6px;
   border-radius: 4px;
 
   @media (min-width: v.$tablet) {
-    margin-left: 23px;
   }
 
   @media (min-width: v.$desctop) {
-    margin-left: 30px;
     font-size: 20px;
     line-height: 26px;
     font-weight: 400;
@@ -111,9 +118,13 @@ const props = defineProps<IRestaurant>();
 }
 
 .card-text {
+  padding: 10px 21px 13px 27px;
   border: 1px solid #f4f4f6;
-
   height: 150px;
+
+  /* @media (min-width: v.$tablet) {
+    
+  } */
 }
 
 .info-img {
@@ -129,21 +140,21 @@ const props = defineProps<IRestaurant>();
 }
 
 .card-info {
-  position: relative;
-  margin: 0px 21px 13px 27px;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 
-  @media (min-width: v.$tablet) {
-    margin: 0px 19px 13px 24px;
+  /* @media (min-width: v.$tablet) {
+    padding: 0px 19px 13px 24px;
   }
 
   @media (min-width: v.$desctop) {
-    margin: 0px 27px 18px 30px;
-  }
+    padding: 0px 27px 18px 30px;
+  } */
 }
 
 .title {
+  white-space: nowrap;
   color: #323142;
   font-size: 20px;
   font-weight: 600;
@@ -190,11 +201,13 @@ const props = defineProps<IRestaurant>();
 }
 
 .favourite {
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
+
+  @media (min-width: v.$tablet) {
+    margin-top: 10px;
+  }
 
   @media (min-width: v.$desctop) {
     display: flex;
