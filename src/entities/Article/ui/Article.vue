@@ -50,6 +50,7 @@ const props = defineProps<IArticle>();
 }
 
 .background-img {
+  width: 100%;
   padding: 17px 14px 0px;
 
   @media (min-width: v.$tablet) {
