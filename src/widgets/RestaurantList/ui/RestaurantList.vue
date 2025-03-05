@@ -3,6 +3,7 @@ import { computed } from "vue";
 import type { IRestaurant } from "@/shared/types";
 import { RestaurantCard } from "@/entities/RestaurantCard";
 import { ViewAll } from "@/entities/ViewAll";
+import { useWindowSize } from "@/shared/hooks";
 
 interface Props {
   title: string;
@@ -13,6 +14,15 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   isViewAll: false,
+});
+
+const { dimensions } = useWindowSize();
+
+const list = computed(() => {
+  if (dimensions.width.value >= 1435) {
+    return props.restaurantList.slice(0, 3);
+  }
+  return props.restaurantList;
 });
 
 const headerCenter = computed(() => {
@@ -35,7 +45,8 @@ const headerCenter = computed(() => {
       </div>
       <div class="restaurant-list">
         <RestaurantCard
-          v-for="item in props.restaurantList"
+          v-if="list"
+          v-for="item in list"
           :key="item.id"
           v-bind="item"
         />
@@ -62,11 +73,15 @@ const headerCenter = computed(() => {
 .restaurant-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 40px;
+  margin-bottom: 100px;
 
   @media (min-width: v.$tablet) {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 20px;
   }
 

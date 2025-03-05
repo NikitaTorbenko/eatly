@@ -6,23 +6,29 @@ const props = defineProps<IRestaurant>();
 
 <template>
   <div class="restaurant-card">
-    <div class="card-img">
-      <img class="food-img" :src="props.image" />
+    <div class="restaurant-img">
+      <img :src="props.image" alt="" />
     </div>
-    <div class="card-text">
-      <div class="food-category">
-        <p class="food-type">{{ props.category }}</p>
+    <div class="restaurant-content">
+      <div
+        class="restaurant-category"
+        :style="{
+          color: props.category.color,
+          backgroundColor: props.category.background_color,
+        }"
+      >
+        {{ props.category.title }}
       </div>
-      <div class="card-info">
-        <div class="info-title">
-          <h1 class="title">{{ props.name }}</h1>
-          <div class="info-text">
-            <p class="info-time">{{ props.delivery_time }} •</p>
+      <div class="restaurant-name">{{ props.name }}</div>
+      <div class="restaurant-footer">
+        <div class="restaurant-info">
+          <span class="restaurant-time">{{ props.delivery_time }} •</span>
+          <span class="restaurant-rating">
             <img class="info-img" src="../assets/icons/star.svg" alt="" />
-            <p class="info-time">{{ props.rating }}</p>
-          </div>
+            {{ props.rating }}
+          </span>
         </div>
-        <div class="favourite">
+        <div class="restaurant-favorite">
           <img
             class="favourite-img"
             src="../assets/icons/favourite.svg"
@@ -38,190 +44,110 @@ const props = defineProps<IRestaurant>();
 @use "@/shared/styles/variables" as v;
 
 .restaurant-card {
-  margin-bottom: 100px;
-  height: 236px;
-  width: 315px;
+  min-width: 315px;
+  width: 100%;
+  max-width: 480px;
   border-radius: 24px;
-  overflow: hidden;
+  box-shadow: 4.73px 56.75px 28.38px 0px rgba(229, 229, 229, 0.7);
+  background-color: #fff;
 
-  @media (min-width: v.$tablet) {
-    width: 280px;
-    height: 220px;
-    border-radius: 21px;
+  @media (min-width: 790px) {
+    width: auto;
   }
 
   @media (min-width: v.$desctop) {
-    width: 395px;
-    height: 297px;
-    border-radius: 30px;
-    border: 1.25px;
+    width: 100%;
+    max-width: 395px;
   }
 }
 
-.card-img {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.food-img {
-  object-fit: cover;
-  width: 315px;
-  height: 176px;
-
-  @media (min-width: v.$tablet) {
-    height: 125px;
-    width: 281px;
-  }
+.restaurant-img {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
 
   @media (min-width: v.$desctop) {
     height: 176px;
-    width: 395px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
   }
 }
 
-.food-category {
-  display: inline-block;
-  background-color: #f7c5ba;
-  padding: 2px 6px;
-  border-radius: 4px;
-
-  @media (min-width: v.$tablet) {
-  }
+.restaurant-content {
+  padding: 8px 21px 13px;
 
   @media (min-width: v.$desctop) {
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: 400;
-    padding: 3px 9px;
-    border-radius: 5px;
+    padding: 11px 26px 17px;
   }
 }
 
-.food-type {
-  color: #fb471d;
+.restaurant-category {
+  width: fit-content;
+  padding: 5px 7px 3px;
+  border-radius: 4px;
   font-size: 10px;
-  line-height: 15px;
-  font-weight: 400;
 
   @media (min-width: v.$tablet) {
     font-size: 9px;
-    line-height: 14px;
-    font-weight: 400;
   }
 
   @media (min-width: v.$desctop) {
-    font-size: 13px;
-    line-height: 16px;
-    font-weight: 400;
+    font-size: 11px;
   }
 }
 
-.card-text {
-  padding: 10px 21px 13px 27px;
-  border: 1px solid #f4f4f6;
-  height: 150px;
+.restaurant-name {
+  color: rgb(50, 49, 66);
+  font-size: 20px;
+  font-weight: 600;
 
-  /* @media (min-width: v.$tablet) {
-    
-  } */
+  @media (min-width: v.$desctop) {
+    font-size: 26px;
+  }
+}
+
+.restaurant-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.restaurant-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: rgb(142, 151, 166);
+  font-size: 15px;
+
+  @media (min-width: v.$desctop) {
+    font-size: 19px;
+  }
 }
 
 .info-img {
-  @media (min-width: v.$tablet) {
-    width: 12px;
-    padding-bottom: 2px;
-  }
-
-  @media (min-width: v.$desctop) {
-    width: 17px;
-    padding-bottom: 2px;
-  }
+  margin-top: 2px;
+  margin-right: 3px;
 }
 
-.card-info {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-
-  /* @media (min-width: v.$tablet) {
-    padding: 0px 19px 13px 24px;
-  }
-
-  @media (min-width: v.$desctop) {
-    padding: 0px 27px 18px 30px;
-  } */
-}
-
-.title {
-  white-space: nowrap;
-  color: #323142;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 33px;
-
-  @media (min-width: v.$tablet) {
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 600;
-  }
-
-  @media (min-width: v.$desctop) {
-    font-size: 22px;
-    font-weight: 600;
-  }
-}
-
-.info-text {
+.restaurant-favorite {
   display: flex;
   align-items: center;
-  gap: 5px;
-
-  @media (min-width: v.$desctop) {
-    gap: 10px;
-  }
-}
-
-.info-time {
-  color: #8e97a6;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 20px;
-
-  @media (min-width: v.$tablet) {
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 400;
-  }
-
-  @media (min-width: v.$desctop) {
-    font-size: 18px;
-    font-weight: 400;
-  }
-}
-
-.favourite {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-
-  @media (min-width: v.$tablet) {
-    margin-top: 10px;
-  }
-
-  @media (min-width: v.$desctop) {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.favourite-img {
-  background-color: #dbd9ee;
-  padding: 8px 10px;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--p-primary-200);
   border-radius: 50%;
 
   @media (min-width: v.$desctop) {
-    padding: 10px 14px;
+    width: 40px;
+    height: 40px;
   }
 }
 </style>

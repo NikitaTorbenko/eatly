@@ -172,7 +172,11 @@
     {
       "id": 1,
       "name": "The Chicken King",
-      "category": "Healthy",
+      "category": {
+        "title": "Healthy",
+        "color": "rgb(218, 163, 26)",
+        "background_color": "rgb(247, 237, 208)"
+      },
       "rating": 4.8,
       "delivery_time": "24min",
       "image": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/12832c43292781.57ea452decf68.jpg",
@@ -181,7 +185,11 @@
     {
       "id": 2,
       "name": "The Burger King",
-      "category": "Trending",
+      "category": {
+        "title": "Trending",
+        "color": "rgb(230, 75, 60)",
+        "background_color": "rgb(255, 222, 222)"
+      },
       "rating": 4.9,
       "delivery_time": "24min",
       "image": "https://yandex-images.clstorage.net/iEG501u89/3fbc48NKS6zV/y7Wx5EFtgeV2KlLLszzji8eEhqnfopLKrJSBpFZf1O-PO0GFInO1Lt6YKl5uYmSauwZKEOsRdXaOjLKW_g9opw7VkGE1KAWwUm-2u7NtpztjRSZo3vZTHp01pCSVPGMt_S2DUwX0x9kPLR-rOwO1Xupg7OTadiITPcmyYGh53kZ80saW8Z3BhdQ7pwgh7rZLNpYmCw00UNpe4dJT9kwSf5-s8VKmVBW7Di-cOWjCYQ-ZEB6Cu4RRMY6bM-ObOI2ULnM31_K-sLTkqGSrMY3n-8V1xHvdREFbrkNhkqaMEf2f3yNTVVYnaI38XyhIICL9S8J_Udg08uPM2LLwyCg8RE6TVBZzT7DVhclHiZHP5loG9SYY34Ria_8RYKO03-CdPozB4SV0BdtOzSxbq5DBLUlhjiKbVxEA79iCEUhov3e-0NQEgV1ydTRr54hD7fRL92dUeC6n4GjPghKzN9wQDP18kRLndFTqzKxduwjC8RzaIf5COdTwIJ_582Npi-zlboOGBrLew-cXeiY6c93GaWcm17nMlDILbUIyQPaMwR9uDFDTVmWFKX2_vitpMIHu60IcUau10lFcSJChWVi9duzidQVifzBEJAomixPcdvil12drrJbzCXzBY3OW3hKvT90yk4YHNcpMbjwoS7ETr_nRbIArpKHxPksQ8Osrz7Q9YYYXca9xh1UoRpjiD3RbRQfFivyEQurtUUNBVd_RDs29YIEXNpe4vGxPq-kg4I-7ce6Di6fRYi5pobHb2NxGfPP0J9FOsQXXmSQbw4ylOzQ392vNFDO77-ExIURPcK0_PdLBRQfVaG2ef1mKcmAsyjA-MsgWwRFfqxASWgp9Ve8zZwSiHwHVJ1uHuyEPBQlF9kfKraXQO86BMKGELIFvby7BIxfnl6hszK_4-XGTXtviTfDJd1NBf7uCAduJ7TWMg3RHQG7x10SIVprgbUeZ1PZ0mUwEAMjucvMRU",
@@ -190,11 +198,28 @@
     {
       "id": 3,
       "name": "Supreme Seafood",
-      "category": "Supreme",
+      "category": {
+        "title": "Supreme",
+        "color": "rgb(34, 102, 238)",
+        "background_color": "rgb(222, 240, 255)"
+      },
       "rating": 4.7,
       "delivery_time": "30min",
       "image": "https://i.pinimg.com/originals/d4/d1/6f/d4d16f13b99845024e321f00f5af98ba.jpg",
       "dishes": [301, 302]
+    },
+    {
+      "id": 4,
+      "name": "The Chicken King",
+      "category": {
+        "title": "Healthy",
+        "color": "rgb(218, 163, 26)",
+        "background_color": "rgb(247, 237, 208)"
+      },
+      "rating": 4.8,
+      "delivery_time": "24min",
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/12832c43292781.57ea452decf68.jpg",
+      "dishes": [101, 102]
     }
   ],
   "dishes": [
@@ -202,7 +227,11 @@
       "id": 101,
       "restaurant_id": 1,
       "name": "Chicken Hell",
-      "category": "Healthy",
+      "category": {
+        "title": "Healthy",
+        "color": "rgb(218, 163, 26)",
+        "background_color": "rgb(247, 237, 208)"
+      },
       "price": 12.99,
       "rating": 4.8,
       "delivery_time": "24min",
@@ -212,7 +241,11 @@
       "id": 102,
       "restaurant_id": 1,
       "name": "Swe Dish",
-      "category": "Trending",
+      "category": {
+        "title": "Trending",
+        "color": "rgb(230, 75, 60)",
+        "background_color": "rgb(255, 222, 222)"
+      },
       "price": 19.99,
       "rating": 4.9,
       "delivery_time": "34min",
@@ -222,7 +255,11 @@
       "id": 201,
       "restaurant_id": 2,
       "name": "Classic Burger",
-      "category": "Trending",
+      "category": {
+        "title": "Trending",
+        "color": "rgb(230, 75, 60)",
+        "background_color": "rgb(255, 222, 222)"
+      },
       "price": 9.99,
       "rating": 4.9,
       "delivery_time": "24min",
@@ -232,7 +269,11 @@
       "id": 202,
       "restaurant_id": 2,
       "name": "Double Cheese Burger",
-      "category": "Trending",
+      "category": {
+        "title": "Trending",
+        "color": "rgb(230, 75, 60)",
+        "background_color": "rgb(255, 222, 222)"
+      },
       "price": 11.99,
       "rating": 5.0,
       "delivery_time": "24min",
@@ -242,7 +283,11 @@
       "id": 301,
       "restaurant_id": 3,
       "name": "Grilled Salmon",
-      "category": "Supreme",
+      "category": {
+        "title": "Supreme",
+        "color": "rgb(34, 102, 238)",
+        "background_color": "rgb(222, 240, 255)"
+      },
       "price": 19.99,
       "rating": 4.8,
       "delivery_time": "30min",
@@ -252,7 +297,11 @@
       "id": 302,
       "restaurant_id": 3,
       "name": "Lobster Special",
-      "category": "Supreme",
+      "category": {
+        "title": "Supreme",
+        "color": "rgb(34, 102, 238)",
+        "background_color": "rgb(222, 240, 255)"
+      },
       "price": 29.99,
       "rating": 5.0,
       "delivery_time": "30min",
@@ -264,7 +313,11 @@
       "id": 101,
       "restaurant_id": 1,
       "name": "Chicken Hell",
-      "category": "Healthy",
+      "category": {
+        "title": "Healthy",
+        "color": "rgb(218, 163, 26)",
+        "background_color": "rgb(247, 237, 208)"
+      },
       "price": 12.99,
       "rating": 4.8,
       "delivery_time": "24min",
@@ -274,7 +327,11 @@
       "id": 202,
       "restaurant_id": 2,
       "name": "Double Cheese Burger",
-      "category": "Trending",
+      "category": {
+        "title": "Trending",
+        "color": "rgb(230, 75, 60)",
+        "background_color": "rgb(255, 222, 222)"
+      },
       "price": 11.99,
       "rating": 5.0,
       "delivery_time": "24min",
@@ -284,7 +341,11 @@
       "id": 301,
       "restaurant_id": 3,
       "name": "Grilled Salmon",
-      "category": "Supreme",
+      "category": {
+        "title": "Supreme",
+        "color": "rgb(34, 102, 238)",
+        "background_color": "rgb(222, 240, 255)"
+      },
       "price": 19.99,
       "rating": 4.8,
       "delivery_time": "30min",
@@ -294,7 +355,11 @@
       "id": 401,
       "restaurant_id": 4,
       "name": "Swe Dish",
-      "category": "Healthy",
+      "category": {
+        "title": "Healthy",
+        "color": "rgb(218, 163, 26)",
+        "background_color": "rgb(247, 237, 208)"
+      },
       "price": 12.99,
       "rating": 4.8,
       "delivery_time": "24min",
@@ -304,7 +369,11 @@
       "id": 402,
       "restaurant_id": 5,
       "name": "Double Cheese Burger",
-      "category": "Trending",
+      "category": {
+        "title": "Trending",
+        "color": "rgb(230, 75, 60)",
+        "background_color": "rgb(255, 222, 222)"
+      },
       "price": 11.99,
       "rating": 5.0,
       "delivery_time": "24min",
