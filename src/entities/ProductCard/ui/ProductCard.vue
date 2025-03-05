@@ -76,6 +76,7 @@ const decimalPart = computed(() => {
 }
 
 .heart {
+  width: 15px;
   position: absolute;
   right: 15px;
 
@@ -101,14 +102,12 @@ const decimalPart = computed(() => {
 .food-type {
   position: absolute;
   left: 14px;
-  bottom: 0px;
-
-  display: inline;
-  padding: 3px 5px;
-  color: rgb(218, 163, 26);
-  background-color: rgb(247, 237, 208);
+  bottom: -15px;
+  padding: 3px 6px;
+  color: #309d5b;
+  background-color: #33ac642f;
   border-radius: 3px;
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 400;
   line-height: 11px;
 
@@ -120,9 +119,9 @@ const decimalPart = computed(() => {
   }
 
   @media (min-width: v.$desctop) {
-    bottom: 0px;
+    bottom: -18px;
     padding: 3px 7px;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 17px;
   }
@@ -136,7 +135,7 @@ const decimalPart = computed(() => {
 }
 
 .card-text {
-  padding: 0px 36px 9px 15px;
+  padding: 15px 30px 9px 15px;
 }
 
 .text-content {
@@ -185,8 +184,8 @@ const decimalPart = computed(() => {
 }
 
 .star-img {
-  width: 10px;
-  height: 12px;
+  width: 12px;
+  height: 14px;
   padding-bottom: 2px;
 }
 
