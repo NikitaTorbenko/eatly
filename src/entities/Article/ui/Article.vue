@@ -15,7 +15,7 @@ const props = defineProps<IArticle>();
     <div class="article-information">
       <div class="article-person">
         <div class="person-logo">
-          <img class="logo" :src="props.authorImage" alt="" />
+          <img class="logo" :src="props.author_image" alt="" />
           <p class="logo-text">
             Written By <br />
             <span class="name">{{ props.author }}</span>
@@ -108,6 +108,8 @@ const props = defineProps<IArticle>();
 }
 
 .logo {
+  border-radius: 50%;
+  width: 30px;
   @media (min-width: v.$desctop) {
     width: 45px;
     height: 45px;
