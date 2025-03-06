@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { ProductList } from "@/widgets/ProductList";
 import { ArticlesList } from "@/widgets/ArticlesList";
 import { RestaurantList } from "@/widgets/RestaurantList";
 import { getPopularProducts, getRestaurants, getArticles } from "../api";
-import type { IProduct, IRestaurant, IArticle } from "@/shared/types";
+import type { IProduct, IRestaurant, IArticle, IViewAll } from "@/shared/types";
 import StatisticBanner from "./StatisticBanner/StatisticBanner.vue";
-import AppBanner from "@/entities/AppBanner/ui/AppBanner.vue";
-import RestaurantCard from "@/entities/RestaurantCard/ui/RestaurantCard.vue";
+import { useWindowSize } from "@/shared/hooks";
+
+const { dimensions } = useWindowSize();
 
 const restaurants = ref<IRestaurant[]>([]);
 const popularProducts = ref<IProduct[]>([]);
@@ -33,6 +34,16 @@ onMounted(() => {
   getPopularProductsHandler();
   getArticlesHandler();
 });
+
+const position = ref<IViewAll>("bottom");
+
+watch(dimensions.width, () => {
+  if (dimensions.width.value >= 750) {
+    position.value = "bottom";
+  } else {
+    position.value = "top";
+  }
+});
 </script>
 
 <template>
@@ -42,21 +53,21 @@ onMounted(() => {
       :article-list="articles"
     />
 
+    <!-- <RestaurantList/> -->
+
     <RestaurantList
       title="Our Top <span class='purple'>Restaurants</span>"
       :restaurant-list="restaurants"
       is-view-all
-      view-all-position="top"
+      :view-all-position="position"
     />
-
-    <StatisticBanner />
 
     <!-- это остается тут -->
     <ProductList
       title="Our Top <span class='purple'>Dishes</span>"
       :product-list="popularProducts"
       is-view-all
-      view-all-position="top"
+      :view-all-position="position"
     />
     <!-- Это для второй главной (если смотреть на макет) -->
   </div>

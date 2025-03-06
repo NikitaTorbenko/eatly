@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import type { IRestaurant } from "@/shared/types";
+import { computed, watch, ref } from "vue";
+import type { IRestaurant, IViewAll } from "@/shared/types";
 import { RestaurantCard } from "@/entities/RestaurantCard";
 import { ViewAll } from "@/entities/ViewAll";
 import { useWindowSize } from "@/shared/hooks";
@@ -9,7 +9,7 @@ interface Props {
   title: string;
   restaurantList: IRestaurant[];
   isViewAll?: boolean;
-  viewAllPosition?: "bottom" | "top";
+  viewAllPosition?: IViewAll;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -40,7 +40,7 @@ const headerCenter = computed(() => {
         <h2 class="title" v-html="props.title" />
         <ViewAll
           url="/"
-          v-if="props.isViewAll && props.viewAllPosition === 'top'"
+          v-if="props.isViewAll && props.viewAllPosition === 'bottom'"
         />
       </div>
       <div class="restaurant-list">
@@ -53,7 +53,7 @@ const headerCenter = computed(() => {
       </div>
       <ViewAll
         url="/"
-        v-if="props.isViewAll && props.viewAllPosition === 'bottom'"
+        v-if="props.isViewAll && props.viewAllPosition === 'top'"
       />
     </div>
   </div>

@@ -1,1 +1,1 @@
-import { Banner } from "../ui";
+export { Banner } from "./ui";

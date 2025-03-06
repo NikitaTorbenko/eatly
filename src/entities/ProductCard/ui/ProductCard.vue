@@ -16,7 +16,15 @@ const decimalPart = computed(() => {
     <div class="card-img">
       <img class="heart" src="../assets/icons/favoriteSvg.svg" alt="" />
       <img class="food-img" :src="props.image" alt="" />
-      <div class="food-type">{{ props.category }}</div>
+      <div
+        class="food-type"
+        :style="{
+          color: props.category.color,
+          backgroundColor: props.category.background_color,
+        }"
+      >
+        {{ props.category.title }}
+      </div>
     </div>
     <div class="card-content">
       <div class="card-text">
@@ -104,8 +112,6 @@ const decimalPart = computed(() => {
   left: 14px;
   bottom: -15px;
   padding: 3px 6px;
-  color: #309d5b;
-  background-color: #33ac642f;
   border-radius: 3px;
   font-size: 10px;
   font-weight: 400;

@@ -3,6 +3,7 @@ import { computed } from "vue";
 import type { IProduct } from "@/shared/types";
 import { ProductCard } from "@/entities/ProductCard";
 import { ViewAll } from "@/entities/ViewAll";
+import { useWindowSize } from "@/shared/hooks";
 
 interface Props {
   title: string;
@@ -21,6 +22,15 @@ const headerCenter = computed(() => {
 
   return "";
 });
+
+const { dimensions } = useWindowSize();
+
+const list = computed(() => {
+  if (dimensions.width.value <= 540 || dimensions.width.value >= 850) {
+    return props.productList.slice(0, 4);
+  }
+  return props.productList;
+});
 </script>
 
 <template>
@@ -35,7 +45,8 @@ const headerCenter = computed(() => {
       </div>
       <div class="card-list">
         <ProductCard
-          v-for="item in props.productList"
+          v-if="list"
+          v-for="item in list"
           :key="item.id"
           v-bind="item"
         />
@@ -52,8 +63,8 @@ const headerCenter = computed(() => {
 @use "@/shared/styles/variables" as v;
 
 .products-list {
-  margin-top: 100px;
-  margin-bottom: 120px;
+  display: flex;
+  justify-content: center;
 }
 
 .header {
@@ -85,8 +96,8 @@ const headerCenter = computed(() => {
 }
 
 .card-list {
-  padding: 0px 30px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   row-gap: 40px;
   column-gap: 20px;
