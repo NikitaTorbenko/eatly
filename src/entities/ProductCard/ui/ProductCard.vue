@@ -14,249 +14,148 @@ const decimalPart = computed(() => {
 <template>
   <div class="card">
     <div class="card-img">
-      <img class="heart" src="../assets/icons/favoriteSvg.svg" alt="" />
-      <img class="food-img" :src="props.image" alt="" />
+      <img :src="props.image" alt="" />
+      <div class="heart">
+        <img src="../assets/icons/heart.svg" alt="" />
+      </div>
+    </div>
+    <div class="card-content">
       <div
-        class="food-type"
         :style="{
           color: props.category.color,
           backgroundColor: props.category.background_color,
         }"
+        class="food-category"
       >
         {{ props.category.title }}
       </div>
-    </div>
-    <div class="card-content">
-      <div class="card-text">
-        <p class="text-title">{{ props.name }}</p>
-        <div class="text-content">
-          <p class="text-time">{{ props.delivery_time }} •</p>
-          <img class="star-img" src="../assets/icons/star.png" alt="" />
-          <div class="text-rate">{{ props.rating }}</div>
-        </div>
+      <div class="food-name">
+        {{ props.name }}
       </div>
-      <div class="card-button">
-        <p class="card-price">
-          ${{ integerPart }}<span class="second-price">.{{ decimalPart }}</span>
-        </p>
-        <button class="card-buy">
-          <img class="plus-button" src="../assets/icons/plus.svg" alt="" />
-        </button>
+      <div class="card-footer">
+        <div class="card-info">
+          <span class="time">{{ props.delivery_time }}•</span>
+          <img class="star" src="../assets/icons/star.png" alt="" />
+          <span class="rating">{{ props.rating }}</span>
+        </div>
+        <div class="card-order">
+          <div class="card-price">${{ props.price }}</div>
+          <div class="card-plus">
+            <img class="plus-img" src="../assets/icons/plus.svg" alt="" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
+<!-- <img class="star-img" src="../assets/icons/star.png" alt="" /> -->
 <style scoped lang="scss">
 @use "@/shared/styles/variables" as v;
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 20px 15px 15px;
+  min-width: 145px;
+  width: 100%;
+  max-width: 225px;
+  border: 1.5px solid #f4f4f6;
   background-color: #ffffff;
-  border: 1px solid rgb(244, 244, 246);
-  border-radius: 23px;
-  width: 147px;
-  box-shadow: 5px 54px 27px #e5e5e5b2;
-
-  @media (min-width: v.$tablet) {
-    width: 160px;
-  }
-
-  @media (min-width: v.$desctop) {
-    width: 220px;
-  }
+  border-radius: 20px;
+  box-shadow: 7px 82px 40px #e5e5e5b2;
 }
 
 .card-img {
-  object-fit: contain;
+  overflow: hidden;
+  border-radius: 20px;
   position: relative;
-  padding: 17px 12px 7px 4px;
-
-  @media (min-width: v.$tablet) {
-    padding: 19px 13px 8px 4px;
-  }
-
-  @media (min-width: v.$desctop) {
-    padding: 26px 18px 11px 6px;
-  }
+  width: 100%;
+  height: auto;
+  // margin: 10px auto;
 }
 
 .heart {
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 15px;
-  position: absolute;
-  right: 15px;
-
-  @media (min-width: v.$desctop) {
-    width: 22px;
-  }
-}
-
-.food-img {
-  width: 130px;
-  height: 135px;
-  border-radius: 5px;
-
-  @media (min-width: v.$tablet) {
-    width: 145px;
-  }
-
-  @media (min-width: v.$desctop) {
-    width: 200px;
-  }
-}
-
-.food-type {
-  position: absolute;
-  left: 14px;
-  bottom: -15px;
-  padding: 3px 6px;
-  border-radius: 3px;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 11px;
-
-  @media (min-width: v.$tablet) {
-    padding: 3px 6px;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 12px;
-  }
-
-  @media (min-width: v.$desctop) {
-    bottom: -18px;
-    padding: 3px 7px;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 17px;
-  }
+  height: 12px;
 }
 
 .card-content {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  gap: 10px;
 }
 
-.card-text {
-  padding: 15px 30px 9px 15px;
+.food-category {
+  width: fit-content;
+  padding: 2px 5px;
+  border-radius: 5px;
+
+  @media (min-width: v.$tablet) {
+    padding: 3px 8px;
+    font-size: 20px;
+  }
 }
 
-.text-content {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.text-title {
-  color: rgb(50, 49, 66);
+.food-name {
+  color: #323142;
   font-size: 15px;
   font-weight: 600;
-  line-height: 25px;
 
   @media (min-width: v.$tablet) {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 26px;
-  }
-
-  @media (min-width: v.$desctop) {
     font-size: 23px;
-    font-weight: 600;
-    line-height: 37px;
   }
 }
 
-.text-time,
-.text-rate {
-  color: #8e93a6;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 15px;
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #8e97a6;
 
   @media (min-width: v.$tablet) {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
-  }
-
-  @media (min-width: v.$desctop) {
     font-size: 17px;
-    font-weight: 400;
-    line-height: 23px;
   }
 }
 
-.star-img {
-  width: 12px;
-  height: 14px;
-  padding-bottom: 2px;
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.card-button {
-  padding: 0px 18px 19px 15px;
+.star {
+  width: 15px;
+  padding-bottom: 3px;
+}
+
+.card-order {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.card-price,
-.second-price {
+.card-price {
   color: #323142;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 26px;
-
-  @media (min-width: v.$tablet) {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 29px;
-  }
-
-  @media (min-width: v.$desctop) {
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 40px;
-  }
 }
 
-.second-price {
-  color: #8e97a6;
-  font-size: 12px;
-
-  @media (min-width: v.$tablet) {
-    font-size: 13px;
-  }
-
-  @media (min-width: v.$desctop) {
-    font-size: 19px;
-  }
-}
-
-.card-buy {
+.card-plus {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
-  padding: 10px 10px;
+  justify-content: center;
   background-color: #323142;
-  border-radius: 6px;
-  font-size: 15px;
-  color: white;
 }
 
-.plus-button {
+.plus-img {
   width: 15px;
   height: 15px;
-
-  @media (min-width: v.$tablet) {
-    width: 17px;
-    height: 17px;
-  }
-
-  @media (min-width: v.$desctop) {
-    width: 20px;
-    height: 20px;
-  }
 }
 </style>

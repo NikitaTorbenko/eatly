@@ -24,13 +24,6 @@ const headerCenter = computed(() => {
 });
 
 const { dimensions } = useWindowSize();
-
-const list = computed(() => {
-  if (dimensions.width.value <= 540 || dimensions.width.value >= 850) {
-    return props.productList.slice(0, 4);
-  }
-  return props.productList;
-});
 </script>
 
 <template>
@@ -44,12 +37,7 @@ const list = computed(() => {
         />
       </div>
       <div class="card-list">
-        <ProductCard
-          v-if="list"
-          v-for="item in list"
-          :key="item.id"
-          v-bind="item"
-        />
+        <ProductCard v-for="item in productList" :key="item.id" v-bind="item" />
       </div>
       <ViewAll
         url="/"

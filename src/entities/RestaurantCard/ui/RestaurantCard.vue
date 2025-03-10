@@ -71,9 +71,6 @@ const props = defineProps<IRestaurant>();
   }
 
   img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
   }
@@ -106,6 +103,7 @@ const props = defineProps<IRestaurant>();
   color: rgb(50, 49, 66);
   font-size: 20px;
   font-weight: 600;
+  margin-top: 10px;
 
   @media (min-width: v.$desctop) {
     font-size: 26px;
@@ -134,6 +132,7 @@ const props = defineProps<IRestaurant>();
 .info-img {
   margin-top: 2px;
   margin-right: 3px;
+  width: 15px;
 }
 
 .restaurant-favorite {
@@ -149,5 +148,9 @@ const props = defineProps<IRestaurant>();
     width: 40px;
     height: 40px;
   }
+}
+.favourite-img {
+  width: 15px;
+  height: 20px;
 }
 </style>

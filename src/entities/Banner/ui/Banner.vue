@@ -3,15 +3,13 @@ import { Button, InputText } from "primevue";
 import { ref, watch } from "vue";
 import { useWindowSize } from "@/shared/hooks";
 
-const email_placeholder = ref("Email Address");
-
+const email_placeholder = ref("Email Adress");
 const { dimensions } = useWindowSize();
-
 watch(dimensions.width, () => {
   if (dimensions.width.value >= 750) {
     email_placeholder.value = "Enter Your Email Address";
   } else {
-    email_placeholder.value = "Email Address";
+    email_placeholder.value = "Email Adress";
   }
 });
 
@@ -19,10 +17,12 @@ const value = ref("");
 </script>
 
 <template>
-  <div class="container">
-    <div class="banner">
-      <h1 class="banner-title">GET 50%</h1>
-      <div class="info">
+  <div class="banner">
+    <div class="banner-information">
+      <div class="banner-title">
+        <span class="title">GET 50%</span>
+      </div>
+      <div class="banner-email">
         <InputText
           class="email"
           :placeholder="email_placeholder"
@@ -30,9 +30,15 @@ const value = ref("");
           v-model="value"
           variant="filled"
         />
-        <Button class="subcribe" label="Subscribe" severity="help" />
+        <Button class="subscribe" label="Subscribe" severity="help" />
       </div>
-      <img class="food" src="../assets/food/food.png" alt="" />
+    </div>
+    <div class="banner-img">
+      <img
+        class="food"
+        src="/src/entities/Banner/assets/food/food.png"
+        alt=""
+      />
     </div>
   </div>
 </template>
@@ -41,112 +47,91 @@ const value = ref("");
 @use "@/shared/styles/variables" as v;
 
 .banner {
-  width: 100%;
   position: relative;
-  background-color: var(--p-primary-600);
-  display: inline-block;
-  opacity: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 315px;
+  max-width: 1215px;
+  height: 255px;
   border-radius: 15px;
+  background-color: var(--p-primary-700);
+  padding: 35px 25px 0 25px;
+
+  @media (min-width: v.$tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 200px;
+    padding: 26px 50px 45px 45px;
+
+    .food {
+      margin-top: 35px;
+    }
+  }
 }
-.banner-title {
-  margin-top: 36px;
-  margin-bottom: 10px;
+
+.banner-information {
   text-align: center;
-  color: #ffffff;
-  font-size: 41px;
-  font-weight: 800;
-  line-height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
 
   @media (min-width: v.$tablet) {
-    margin-left: 48px;
     text-align: start;
+    align-items: inherit;
   }
 }
 
-.info {
-  position: relative;
-  margin: 0px 28px;
-  margin-bottom: 100px;
+.banner-title {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 800;
+}
 
-  @media (min-width: v.$tablet) {
-    margin-left: 48px;
-    font-size: 50px;
-    font-weight: 800;
-    line-height: auto;
-    margin-bottom: 50px;
-  }
+.banner-email {
+  position: relative;
+  min-width: 260px;
+  max-width: 440px;
 }
 
 .email {
   width: 100%;
-  color: #878787;
-  font-size: 11px;
-  font-weight: 500;
+  min-width: 260px;
+  max-width: 440px;
+  padding: 15px 15px;
+  padding-right: 75px;
+  font-size: 16px;
   letter-spacing: 3%;
-  width: 260px;
-  height: 50px;
-  border-radius: 9px;
-  padding-right: 130px;
+  color: #878787;
 
   @media (min-width: v.$tablet) {
-    width: 300px;
-    font-size: 11px;
-    line-height: 17px;
-    font-weight: 400;
-    border-radius: 10px;
-    padding-right: 130px;
-  }
-
-  @media (min-width: v.$desctop) {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    border-radius: 10px;
-    padding-right: 115px;
+    padding-right: 100px;
   }
 }
 
-.subcribe {
+.subscribe {
   position: absolute;
-  right: 12px;
-  bottom: 8px;
+  top: 8px;
+  right: 7px;
+  padding: 10px 15px;
+  font-size: 10px;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+  color: #f7f8fa;
+}
 
-  @media (min-width: v.$tablet) {
-    position: absolute;
-    padding: 10px 18px;
-    border-radius: 8px;
-    bottom: 5px;
-    right: 420px;
-  }
+.banner-img {
+  display: flex;
+  justify-content: center;
 
   @media (min-width: v.$desctop) {
-    position: absolute;
-    padding: 16px 24px;
-    border-radius: 11px;
-    bottom: 68px;
-    right: 0px;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 3%;
+    right: 30px;
   }
 }
 
 .food {
-  position: absolute;
-  right: 75px;
-  top: 170px;
   width: 170px;
   height: 170px;
-
-  @media (min-width: v.$tablet) {
-    width: 195px;
-    height: 195px;
-    top: 60px;
-  }
-  @media (min-width: v.$desctop) {
-    width: 270px;
-    height: 270px;
-    top: 60px;
-  }
 }
 </style>

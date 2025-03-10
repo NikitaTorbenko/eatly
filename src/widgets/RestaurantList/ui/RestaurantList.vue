@@ -35,27 +35,25 @@ const headerCenter = computed(() => {
 
 <template>
   <div class="restaunrants">
-    <div class="container">
-      <div class="header" :class="headerCenter">
-        <h2 class="title" v-html="props.title" />
-        <ViewAll
-          url="/"
-          v-if="props.isViewAll && props.viewAllPosition === 'bottom'"
-        />
-      </div>
-      <div class="restaurant-list">
-        <RestaurantCard
-          v-if="list"
-          v-for="item in list"
-          :key="item.id"
-          v-bind="item"
-        />
-      </div>
+    <div class="header" :class="headerCenter">
+      <h2 class="title" v-html="props.title" />
       <ViewAll
         url="/"
-        v-if="props.isViewAll && props.viewAllPosition === 'top'"
+        v-if="props.isViewAll && props.viewAllPosition === 'bottom'"
       />
     </div>
+    <div class="restaurant-list">
+      <RestaurantCard
+        v-if="list"
+        v-for="item in list"
+        :key="item.id"
+        v-bind="item"
+      />
+    </div>
+    <ViewAll
+      url="/"
+      v-if="props.isViewAll && props.viewAllPosition === 'top'"
+    />
   </div>
 </template>
 

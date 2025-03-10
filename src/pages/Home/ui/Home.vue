@@ -7,7 +7,7 @@ import { getPopularProducts, getRestaurants, getArticles } from "../api";
 import type { IProduct, IRestaurant, IArticle, IViewAll } from "@/shared/types";
 import StatisticBanner from "./StatisticBanner/StatisticBanner.vue";
 import { useWindowSize } from "@/shared/hooks";
-
+import { Banner } from "@/entities/Banner";
 const { dimensions } = useWindowSize();
 
 const restaurants = ref<IRestaurant[]>([]);
@@ -47,13 +47,15 @@ watch(dimensions.width, () => {
 </script>
 
 <template>
-  <div class="home">
-    <ArticlesList
+  <div class="home container">
+    <!-- <ArticlesList
       title="Latest <span class='purple'>Articles</span>"
       :article-list="articles"
-    />
+    /> -->
 
     <!-- <RestaurantList/> -->
+
+    <Banner />
 
     <RestaurantList
       title="Our Top <span class='purple'>Restaurants</span>"
@@ -77,8 +79,6 @@ watch(dimensions.width, () => {
 @use "@/shared/styles/variables" as v;
 
 .rest {
-  /* display: grid;
-  grid-template-columns: 1fr; */
   display: flex;
   align-items: center;
   flex-direction: column;
