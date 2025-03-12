@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, watch } from "vue";
 import type { IProduct } from "@/shared/types";
 import { ProductCard } from "@/entities/ProductCard";
 import { ViewAll } from "@/entities/ViewAll";
@@ -24,6 +24,15 @@ const headerCenter = computed(() => {
 });
 
 const { dimensions } = useWindowSize();
+
+const list = computed(() => {
+  if (dimensions.width.value >= 590 && dimensions.width.value <= 875) {
+    return props.productList.slice(0, 4);
+  } else if (dimensions.width.value >= 1430) {
+    return props.productList.slice(0, 5);
+  }
+  return props.productList;
+});
 </script>
 
 <template>
@@ -37,7 +46,12 @@ const { dimensions } = useWindowSize();
         />
       </div>
       <div class="card-list">
-        <ProductCard v-for="item in productList" :key="item.id" v-bind="item" />
+        <ProductCard
+          v-if="list"
+          v-for="item in list"
+          :key="item.id"
+          v-bind="item"
+        />
       </div>
       <ViewAll
         url="/"
@@ -50,37 +64,11 @@ const { dimensions } = useWindowSize();
 <style scoped lang="scss">
 @use "@/shared/styles/variables" as v;
 
-.products-list {
-  display: flex;
-  justify-content: center;
-}
-
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 75px;
-
-  &-center {
-    justify-content: center;
-  }
-}
-
-.title {
-  text-align: center;
   font-size: 30px;
   font-weight: 600;
-  line-height: 36px;
-
-  @media (min-width: v.$tablet) {
-    font-size: 32px;
-    line-height: 18px;
-  }
-
-  @media (min-width: v.$desctop) {
-    font-size: 45px;
-    line-height: 26px;
-  }
+  text-align: center;
+  padding-bottom: 60px;
 }
 
 .card-list {
@@ -90,16 +78,8 @@ const { dimensions } = useWindowSize();
   row-gap: 40px;
   column-gap: 20px;
 
-  margin-bottom: 66px;
-
   @media (min-width: v.$tablet) {
-    column-gap: 20px;
-  }
-
-  @media (min-width: v.$desctop) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    column-gap: 30px;
   }
 }
 </style>

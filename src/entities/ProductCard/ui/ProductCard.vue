@@ -49,7 +49,6 @@ const decimalPart = computed(() => {
   </div>
 </template>
 
-<!-- <img class="star-img" src="../assets/icons/star.png" alt="" /> -->
 <style scoped lang="scss">
 @use "@/shared/styles/variables" as v;
 
@@ -100,10 +99,13 @@ const decimalPart = computed(() => {
 }
 
 .food-name {
+  margin: 5px 0px;
+  display: flex;
+  align-items: center;
   color: #323142;
   font-size: 15px;
   font-weight: 600;
-
+  height: 23px;
   @media (min-width: v.$tablet) {
     font-size: 23px;
   }
