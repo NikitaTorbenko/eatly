@@ -312,7 +312,7 @@
     {
       "id": 101,
       "restaurant_id": 1,
-      "name": "Chicken Hell",
+      "name": "Chicken Hell ",
       "category": {
         "title": "Healthy",
         "color": "rgb(218, 163, 26)",
@@ -378,6 +378,72 @@
       "rating": 5.0,
       "delivery_time": "21min",
       "image": "https://i.postimg.cc/K8DS29ZG/Berry-Bliss.webp"
+    },
+    {
+      "id": 403,
+      "restaurant_id": 6,
+      "name": "Strawberry Heaven",
+      "category": {
+        "title": "Trending",
+        "color": "rgb(230, 75, 60)",
+        "background_color": "rgb(255, 222, 222)"
+      },
+      "price": 18,
+      "rating": 4.8,
+      "delivery_time": "15min",
+      "image": "https://i.postimg.cc/qvDVddb4/DALL-E-2025-03-10-11-43-55-A-top-down-view-of-a-gourmet-dessert-named-Strawberry-Heaven-The-des.webp"
     }
-  ]
+    
+  ],
+    "reviews" : [
+      {
+        "id": 1,
+        "person_name": "Daniel R.",
+        "person_year": "01 Year With Us",
+        "person_image": "https://i.postimg.cc/W11CSbmT/DALL-E-2025-03-10-15-13-57-A-professional-minimalist-avatar-of-a-smiling-person-in-a-circular-fram.webp",
+        "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
+        "rating": "https://i.postimg.cc/Vk6C8MFV/Stars.png"
+      },
+      {
+        "id": 2,
+        "person_name": "Nathan P.",
+        "person_year": "02 Year With Us",
+        "person_image": "https://i.postimg.cc/ZKZ1BLC9/DALL-E-2025-03-10-15-13-28-A-professional-minimalist-avatar-of-a-smiling-man-in-a-circular-frame.webp",
+        "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
+        "rating": "https://i.postimg.cc/HxGcXN1q/Stars-1.png"
+      },
+      {
+        "id": 3,
+        "person_name": "Radimachka",
+        "person_year": "03 Year With Us",
+        "person_image": "https://i.postimg.cc/y8hxhjTw/DALL-E-2025-03-10-15-17-22-A-professional-minimalist-avatar-of-a-smiling-woman-in-a-circular-frame.webp",
+        "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
+        "rating": "https://i.postimg.cc/HxGcXN1q/Stars-1.png"
+      },
+      {
+        "id": 4,
+        "person_name": "Emma L.",
+        "person_year": "04 Year With Us",
+        "person_image": "https://i.postimg.cc/NFrfKkMC/DALL-E-2025-03-10-15-18-03-A-professional-minimalist-avatar-of-a-smiling-woman-in-a-circular-frame.webp",
+        "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
+        "rating": "https://i.postimg.cc/HxGcXN1q/Stars-1.png"
+      },
+      {
+        "id": 5,
+        "person_name": "Ethan J.",
+        "person_year": "05 Year With Us",
+        "person_image": "https://i.postimg.cc/Df19wNyk/DALL-E-2025-03-10-15-12-54-A-professional-minimalist-avatar-of-a-smiling-person-in-a-circular-fram.webp",
+        "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
+        "rating": "https://i.postimg.cc/Vk6C8MFV/Stars.png"
+      },
+      {
+        "id": 6,
+        "person_name": "Olivia K.",
+        "person_year": "06 Year With Us",
+        "person_image": "https://i.postimg.cc/J0ytbWTq/DALL-E-2025-03-10-15-16-21-A-professional-minimalist-avatar-of-a-smiling-person-in-a-circular-fram.webp",
+        "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
+        "rating": "https://i.postimg.cc/HxGcXN1q/Stars-1.png"
+      }
+
+    ]
 }

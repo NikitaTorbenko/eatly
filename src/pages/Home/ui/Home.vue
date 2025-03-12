@@ -1,18 +1,33 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from "vue";
-import { ProductList } from "@/widgets/ProductList";
-import { ArticlesList } from "@/widgets/ArticlesList";
-import { RestaurantList } from "@/widgets/RestaurantList";
-import { getPopularProducts, getRestaurants, getArticles } from "../api";
-import type { IProduct, IRestaurant, IArticle, IViewAll } from "@/shared/types";
-import StatisticBanner from "./StatisticBanner/StatisticBanner.vue";
-import { useWindowSize } from "@/shared/hooks";
+import { Review } from "@/entities/Review";
 import { Banner } from "@/entities/Banner";
+import { onMounted, ref, watch } from "vue";
+import { useWindowSize } from "@/shared/hooks";
+import { ProductList } from "@/widgets/ProductList";
+import { RestaurantList } from "@/widgets/RestaurantList";
+import {
+  getPopularProducts,
+  getRestaurants,
+  getArticles,
+  getReviews,
+} from "../api";
+import {
+  type IProduct,
+  type IRestaurant,
+  type IArticle,
+  type IViewAll,
+  type IReviews,
+} from "@/shared/types";
+import ProductCard from "@/entities/ProductCard/ui/ProductCard.vue";
+import { RestaurantCard } from "@/entities/RestaurantCard";
+import ReviewsList from "@/widgets/ReviewsList/ui/ReviewsList.vue";
+
 const { dimensions } = useWindowSize();
 
 const restaurants = ref<IRestaurant[]>([]);
 const popularProducts = ref<IProduct[]>([]);
 const articles = ref<IArticle[]>([]);
+const reviews = ref<IReviews[]>([]);
 
 const getPopularProductsHandler = async () => {
   const { data } = await getPopularProducts();
@@ -29,10 +44,16 @@ const getArticlesHandler = async () => {
   articles.value = data;
 };
 
+const getReviewsHandler = async () => {
+  const { data } = await getReviews();
+  reviews.value = data;
+};
+
 onMounted(() => {
   getRestaurantsHandler();
   getPopularProductsHandler();
   getArticlesHandler();
+  getReviewsHandler();
 });
 
 const position = ref<IViewAll>("bottom");
@@ -47,13 +68,18 @@ watch(dimensions.width, () => {
 </script>
 
 <template>
-  <div class="home container">
+  <div class="home">
     <!-- <ArticlesList
       title="Latest <span class='purple'>Articles</span>"
       :article-list="articles"
     /> -->
 
-    <!-- <RestaurantList/> -->
+    <!-- <ReviewsList title="fasdasd" :review-list="reviews" /> -->
+
+    <ReviewsList
+      title="Our Top <span class='purple'>Dishes</span>"
+      :review-list="reviews"
+    />
 
     <Banner />
 
