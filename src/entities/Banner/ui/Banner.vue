@@ -17,28 +17,30 @@ const value = ref("");
 </script>
 
 <template>
-  <div class="banner">
-    <div class="banner-information">
-      <div class="banner-title">
-        <span class="title">GET 50%</span>
+  <div class="container">
+    <div class="banner">
+      <div class="banner-information">
+        <div class="banner-title">
+          <span class="title">GET 50%</span>
+        </div>
+        <div class="banner-email">
+          <InputText
+            class="email"
+            :placeholder="email_placeholder"
+            type="text"
+            v-model="value"
+            variant="filled"
+          />
+          <Button class="subscribe" label="Subscribe" severity="help" />
+        </div>
       </div>
-      <div class="banner-email">
-        <InputText
-          class="email"
-          :placeholder="email_placeholder"
-          type="text"
-          v-model="value"
-          variant="filled"
+      <div class="banner-img">
+        <img
+          class="food"
+          src="/src/entities/Banner/assets/food/food.png"
+          alt=""
         />
-        <Button class="subscribe" label="Subscribe" severity="help" />
       </div>
-    </div>
-    <div class="banner-img">
-      <img
-        class="food"
-        src="/src/entities/Banner/assets/food/food.png"
-        alt=""
-      />
     </div>
   </div>
 </template>
