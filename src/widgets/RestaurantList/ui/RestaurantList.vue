@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, watch, ref } from "vue";
+import { computed } from "vue";
 import type { IRestaurant, IViewAll } from "@/shared/types";
 import { RestaurantCard } from "@/entities/RestaurantCard";
 import { ViewAll } from "@/entities/ViewAll";
@@ -34,26 +34,28 @@ const headerCenter = computed(() => {
 </script>
 
 <template>
-  <div class="restaunrants">
-    <div class="header" :class="headerCenter">
-      <h2 class="title" v-html="props.title" />
+  <div class="container">
+    <div class="restaunrants">
+      <div class="header" :class="headerCenter">
+        <h2 class="title" v-html="props.title" />
+        <ViewAll
+          url="/"
+          v-if="props.isViewAll && props.viewAllPosition === 'bottom'"
+        />
+      </div>
+      <div class="restaurant-list">
+        <RestaurantCard
+          v-if="list"
+          v-for="item in list"
+          :key="item.id"
+          v-bind="item"
+        />
+      </div>
       <ViewAll
         url="/"
-        v-if="props.isViewAll && props.viewAllPosition === 'bottom'"
+        v-if="props.isViewAll && props.viewAllPosition === 'top'"
       />
     </div>
-    <div class="restaurant-list">
-      <RestaurantCard
-        v-if="list"
-        v-for="item in list"
-        :key="item.id"
-        v-bind="item"
-      />
-    </div>
-    <ViewAll
-      url="/"
-      v-if="props.isViewAll && props.viewAllPosition === 'top'"
-    />
   </div>
 </template>
 
