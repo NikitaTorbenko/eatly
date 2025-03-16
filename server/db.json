@@ -402,23 +402,23 @@
         "person_year": "01 Year With Us",
         "person_image": "https://i.postimg.cc/W11CSbmT/DALL-E-2025-03-10-15-13-57-A-professional-minimalist-avatar-of-a-smiling-person-in-a-circular-fram.webp",
         "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
-        "rating": "https://i.postimg.cc/Vk6C8MFV/Stars.png"
+        "rating": 3
       },
       {
         "id": 2,
-        "person_name": "Nathan P.",
-        "person_year": "02 Year With Us",
-        "person_image": "https://i.postimg.cc/ZKZ1BLC9/DALL-E-2025-03-10-15-13-28-A-professional-minimalist-avatar-of-a-smiling-man-in-a-circular-frame.webp",
-        "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
-        "rating": "https://i.postimg.cc/HxGcXN1q/Stars-1.png"
-      },
-      {
-        "id": 3,
         "person_name": "Radimachka",
         "person_year": "03 Year With Us",
         "person_image": "https://i.postimg.cc/y8hxhjTw/DALL-E-2025-03-10-15-17-22-A-professional-minimalist-avatar-of-a-smiling-woman-in-a-circular-frame.webp",
         "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
-        "rating": "https://i.postimg.cc/HxGcXN1q/Stars-1.png"
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "person_name": "Nathan P.",
+        "person_year": "02 Year With Us",
+        "person_image": "https://i.postimg.cc/ZKZ1BLC9/DALL-E-2025-03-10-15-13-28-A-professional-minimalist-avatar-of-a-smiling-man-in-a-circular-frame.webp",
+        "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
+        "rating": 4
       },
       {
         "id": 4,
@@ -426,7 +426,7 @@
         "person_year": "04 Year With Us",
         "person_image": "https://i.postimg.cc/NFrfKkMC/DALL-E-2025-03-10-15-18-03-A-professional-minimalist-avatar-of-a-smiling-woman-in-a-circular-frame.webp",
         "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
-        "rating": "https://i.postimg.cc/HxGcXN1q/Stars-1.png"
+        "rating": 1
       },
       {
         "id": 5,
@@ -434,7 +434,7 @@
         "person_year": "05 Year With Us",
         "person_image": "https://i.postimg.cc/Df19wNyk/DALL-E-2025-03-10-15-12-54-A-professional-minimalist-avatar-of-a-smiling-person-in-a-circular-fram.webp",
         "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
-        "rating": "https://i.postimg.cc/Vk6C8MFV/Stars.png"
+        "rating": 2
       },
       {
         "id": 6,
@@ -442,7 +442,7 @@
         "person_year": "06 Year With Us",
         "person_image": "https://i.postimg.cc/J0ytbWTq/DALL-E-2025-03-10-15-16-21-A-professional-minimalist-avatar-of-a-smiling-person-in-a-circular-fram.webp",
         "person_text": "“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”",
-        "rating": "https://i.postimg.cc/HxGcXN1q/Stars-1.png"
+        "rating": 3
       }
 
     ]

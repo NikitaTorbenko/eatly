@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { ReviewStar } from "@/shared/assets/icons";
 import type { IReviews } from "@/shared/types";
+import { Rating } from "primevue";
+import { Value } from "sass";
 
 const props = defineProps<IReviews>();
 </script>
@@ -29,7 +32,7 @@ const props = defineProps<IReviews>();
         </p>
       </div>
       <div class="footer">
-        <img class="rating" :src="props.rating" alt="" />
+        <Rating v-model="props.rating" :stars="5" readonly />
       </div>
     </div>
   </div>
@@ -49,7 +52,7 @@ const props = defineProps<IReviews>();
 .review {
   padding: 30px 45px;
   @media (min-width: v.$tablet) {
-    padding: 30px;
+    padding: 30px 20px;
   }
 }
 
@@ -57,7 +60,7 @@ const props = defineProps<IReviews>();
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  gap: 10px;
   /* @media (min-width: v.$tablet) {
   } */
 }
@@ -121,10 +124,13 @@ const props = defineProps<IReviews>();
 
 .footer {
   padding-top: 35px;
-  width: 80px;
 
   @media (min-width: v.$tablet) {
-    width: 100px;
   }
+}
+
+.star-rating {
+  width: 20px;
+  height: 20px;
 }
 </style>

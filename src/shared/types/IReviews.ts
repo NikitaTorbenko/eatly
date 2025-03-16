@@ -4,5 +4,5 @@ export interface IReviews {
   person_year: string;
   person_image: string;
   person_text: string;
-  rating: string;
+  rating: number;
 }

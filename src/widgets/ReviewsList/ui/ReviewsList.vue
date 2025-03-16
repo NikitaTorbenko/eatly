@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { Review } from "@/entities/Review";
 import type { IReviews } from "@/shared/types";
-import { watch, computed } from "vue";
+import { computed } from "vue";
 import { useWindowSize } from "@/shared/hooks";
-const { dimensions } = useWindowSize();
 
 interface Props {
   title: string;
   reviewList: IReviews[];
 }
+
 const props = defineProps<Props>();
+
+const { dimensions } = useWindowSize();
 
 const list = computed(() => {
   if (dimensions.width.value >= 750) {
